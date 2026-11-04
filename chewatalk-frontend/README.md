@@ -57,7 +57,9 @@ About 6–10 seconds after the page loads, and then every 30–70 seconds, one p
 The live site is at https://chewatalk.com (and www). It's a Cloudflare Worker named `chewatalk` that only serves static assets, on the same account as gabrielerzah.com. To redeploy after changes, run this from this folder:
 
 ```sh
-npx wrangler@4 deploy
+npx wrangler@4 deploy --config wrangler.jsonc
 ```
+
+Name the config explicitly. If a `wrangler.jsonc` exists at the repo root, wrangler can pick that one up instead and publish to the wrong worker.
 
 `.assetsignore` stops `tools/`, the README and the config files from being uploaded. `_headers` sets the security headers. Unknown paths fall back to the app, which routes with `#/…`.
