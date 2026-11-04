@@ -1,0 +1,3263 @@
+{
+ "levels": [
+  {
+   "level": 1,
+   "name": "Beginner",
+   "title": "First Words"
+  },
+  {
+   "level": 2,
+   "name": "Elementary",
+   "title": "Everyday Vocabulary"
+  },
+  {
+   "level": 3,
+   "name": "Intermediate",
+   "title": "Building Sentences"
+  },
+  {
+   "level": 4,
+   "name": "Upper Intermediate",
+   "title": "Conversations"
+  },
+  {
+   "level": 5,
+   "name": "Advanced",
+   "title": "Real-World Fluency"
+  }
+ ],
+ "categories": [
+  {
+   "id": "l1-greetings",
+   "track": "curriculum",
+   "level": 1,
+   "name": "Greetings"
+  },
+  {
+   "id": "l1-introductions",
+   "track": "curriculum",
+   "level": 1,
+   "name": "Introductions"
+  },
+  {
+   "id": "l1-basic-words",
+   "track": "curriculum",
+   "level": 1,
+   "name": "Basic Words"
+  },
+  {
+   "id": "l1-numbers",
+   "track": "curriculum",
+   "level": 1,
+   "name": "Numbers"
+  },
+  {
+   "id": "l2-family",
+   "track": "curriculum",
+   "level": 2,
+   "name": "Family"
+  },
+  {
+   "id": "l2-food-and-drinks",
+   "track": "curriculum",
+   "level": 2,
+   "name": "Food and Drinks"
+  },
+  {
+   "id": "l2-colours",
+   "track": "curriculum",
+   "level": 2,
+   "name": "Colours"
+  },
+  {
+   "id": "l2-animals",
+   "track": "curriculum",
+   "level": 2,
+   "name": "Animals"
+  },
+  {
+   "id": "l2-common-actions",
+   "track": "curriculum",
+   "level": 2,
+   "name": "Common Actions"
+  },
+  {
+   "id": "l3-navigation-and-directions",
+   "track": "curriculum",
+   "level": 3,
+   "name": "Navigation and Directions"
+  },
+  {
+   "id": "l3-shopping",
+   "track": "curriculum",
+   "level": 3,
+   "name": "Shopping"
+  },
+  {
+   "id": "l3-questions",
+   "track": "curriculum",
+   "level": 3,
+   "name": "Questions"
+  },
+  {
+   "id": "l3-daily-activities",
+   "track": "curriculum",
+   "level": 3,
+   "name": "Daily Activities"
+  },
+  {
+   "id": "l4-social-conversations",
+   "track": "curriculum",
+   "level": 4,
+   "name": "Social Conversations"
+  },
+  {
+   "id": "l4-feelings-and-opinions",
+   "track": "curriculum",
+   "level": 4,
+   "name": "Feelings and Opinions"
+  },
+  {
+   "id": "l4-time-and-plans",
+   "track": "curriculum",
+   "level": 4,
+   "name": "Time and Plans"
+  },
+  {
+   "id": "l4-health-and-emergencies",
+   "track": "curriculum",
+   "level": 4,
+   "name": "Health and Emergencies"
+  },
+  {
+   "id": "l5-complex-conversations",
+   "track": "curriculum",
+   "level": 5,
+   "name": "Complex Conversations"
+  },
+  {
+   "id": "l5-storytelling-and-experiences",
+   "track": "curriculum",
+   "level": 5,
+   "name": "Storytelling and Experiences"
+  },
+  {
+   "id": "l5-opinions-and-explanations",
+   "track": "curriculum",
+   "level": 5,
+   "name": "Opinions and Explanations"
+  },
+  {
+   "id": "l5-real-world-situations",
+   "track": "curriculum",
+   "level": 5,
+   "name": "Real-World Situations"
+  },
+  {
+   "id": "kit-greetings-people",
+   "track": "kit",
+   "level": 0,
+   "name": "Greetings & People"
+  },
+  {
+   "id": "kit-needs",
+   "track": "kit",
+   "level": 0,
+   "name": "Needs"
+  },
+  {
+   "id": "kit-travel-market",
+   "track": "kit",
+   "level": 0,
+   "name": "Travel & Market"
+  },
+  {
+   "id": "kit-talking-about-talking",
+   "track": "kit",
+   "level": 0,
+   "name": "Talking About Talking"
+  }
+ ],
+ "items": [
+  {
+   "id": "l1-greetings-01",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Hello",
+   "nyanja": "Bwanji?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   },
+   "note": "The source gives Bwanji? for Hello. It literally asks 'how?' and works as a casual greeting."
+  },
+  {
+   "id": "l1-greetings-02",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Hi",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-03",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Good morning",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-04",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Good afternoon",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-05",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Good evening",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-06",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Good night",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-07",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Goodbye",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-08",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "See you later",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-09",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "How are you?",
+   "nyanja": "Muli bwanji?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   },
+   "note": "Plural or respectful. Informal, to one person: Uli bwanji?"
+  },
+  {
+   "id": "l1-greetings-10",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "I am fine",
+   "nyanja": "Ndiri bwino",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 11
+   }
+  },
+  {
+   "id": "l1-greetings-11",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Thank you",
+   "nyanja": "Zikomo",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "l1-greetings-12",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "You're welcome",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-13",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Please",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-greetings-14",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Sorry",
+   "nyanja": "Pepani",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "sourceEnglish": "I am sorry"
+  },
+  {
+   "id": "l1-greetings-15",
+   "category": "l1-greetings",
+   "level": 1,
+   "english": "Excuse me",
+   "nyanja": "Ndikululukileni",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "note": "Page 7 spells it Ndikululukireni."
+  },
+  {
+   "id": "l1-introductions-01",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "What is your name?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-02",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "My name is...",
+   "nyanja": "Dzina langa ndine...",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "l1-introductions-03",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "What is your surname?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-04",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "Where are you from?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-05",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "I am from Zambia",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-06",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "Where do you live?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-07",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "I live here",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-08",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "Nice to meet you",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-09",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "How old are you?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-introductions-10",
+   "category": "l1-introductions",
+   "level": 1,
+   "english": "I am a student",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-01",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Yes",
+   "nyanja": "Inde",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "l1-basic-words-02",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "No",
+   "nyanja": "Iai-ai",
+   "status": "review",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   },
+   "note": "Faint print in the scan. Confirm the spelling with a speaker."
+  },
+  {
+   "id": "l1-basic-words-03",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Maybe",
+   "nyanja": "Kapena",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   },
+   "sourceEnglish": "Maybe / Perhaps"
+  },
+  {
+   "id": "l1-basic-words-04",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Good",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-05",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Bad",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-06",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Big",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-07",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Small",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-08",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Hot",
+   "nyanja": "Kupya",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   },
+   "note": "Verb form: to be hot."
+  },
+  {
+   "id": "l1-basic-words-09",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Cold",
+   "nyanja": "Kuzizira",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   },
+   "note": "Verb form: to be cold."
+  },
+  {
+   "id": "l1-basic-words-10",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Happy",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-11",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Sad",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-12",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Here",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-13",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "There",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-14",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Today",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-basic-words-15",
+   "category": "l1-basic-words",
+   "level": 1,
+   "english": "Tomorrow",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-01",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "One",
+   "nyanja": "Cimodzi",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "sourceEnglish": "I want one: Ndifuna cimodzi",
+   "note": "Number words change with the noun class. This is the form from the source sentence."
+  },
+  {
+   "id": "l1-numbers-02",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Two",
+   "nyanja": "Ziwiri",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "sourceEnglish": "I don't want two: Sindifuna ziwiri",
+   "note": "Number words change with the noun class. This is the form from the source sentence."
+  },
+  {
+   "id": "l1-numbers-03",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Three",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-04",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Four",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-05",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Five",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-06",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Six",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-07",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Seven",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-08",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Eight",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-09",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Nine",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l1-numbers-10",
+   "category": "l1-numbers",
+   "level": 1,
+   "english": "Ten",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-01",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Mother",
+   "nyanja": "Mai",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "l2-family-02",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Father",
+   "nyanja": "Tate",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "l2-family-03",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Brother",
+   "nyanja": "Mlongo",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   },
+   "note": "The source gives Mlongo for both brother and sister."
+  },
+  {
+   "id": "l2-family-04",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Sister",
+   "nyanja": "Mlongo",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   },
+   "note": "The source gives Mlongo for both brother and sister."
+  },
+  {
+   "id": "l2-family-05",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Grandmother",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-06",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Grandfather",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-07",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Son",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-08",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Daughter",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-09",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Child",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-10",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Baby",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-11",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Husband",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-12",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Wife",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-13",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Uncle",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-14",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Aunt",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-family-15",
+   "category": "l2-family",
+   "level": 2,
+   "english": "Family",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-01",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Water",
+   "nyanja": "Madzi",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "l2-food-and-drinks-02",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Food",
+   "nyanja": "Cakudya",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   },
+   "note": "1995 spelling. Modern spelling: chakudya."
+  },
+  {
+   "id": "l2-food-and-drinks-03",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Bread",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-04",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Rice",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-05",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Chicken",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-06",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Fish",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-07",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Meat",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-08",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Milk",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-09",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Tea",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-10",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Sugar",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-11",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Salt",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-12",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Egg",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-13",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Banana",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-14",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Apple",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-15",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "Vegetables",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-16",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "I am hungry",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-17",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "I am thirsty",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-18",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "I want water",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-19",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "I like this food",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-food-and-drinks-20",
+   "category": "l2-food-and-drinks",
+   "level": 2,
+   "english": "The food is good",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-01",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Red",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-02",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Blue",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-03",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Green",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-04",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Yellow",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-05",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Black",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-06",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "White",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-07",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Orange",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-08",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Purple",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-09",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Brown",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-10",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "Pink",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-11",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "What colour is this?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-12",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "This is red",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-13",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "I like blue",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-14",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "The car is black",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-colours-15",
+   "category": "l2-colours",
+   "level": 2,
+   "english": "My shirt is white",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-01",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Dog",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-02",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Cat",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-03",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Cow",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-04",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Goat",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-05",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Chicken",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-06",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Elephant",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-07",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Lion",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-08",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Monkey",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-09",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Snake",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-10",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Bird",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-11",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Fish",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-12",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Horse",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-13",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Pig",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-14",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Sheep",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-animals-15",
+   "category": "l2-animals",
+   "level": 2,
+   "english": "Rabbit",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-01",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Eat",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-02",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Drink",
+   "nyanja": "Imwa",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "l2-common-actions-03",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Sleep",
+   "nyanja": "Kugona",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   },
+   "sourceEnglish": "To sleep"
+  },
+  {
+   "id": "l2-common-actions-04",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Walk",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-05",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Run",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-06",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Sit",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-07",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Stand",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-08",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Come",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-09",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Go",
+   "nyanja": "Pita",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "l2-common-actions-10",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Stop",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-11",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Look",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-12",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Listen",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-13",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Speak",
+   "nyanja": "Lankhula",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "l2-common-actions-14",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Read",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l2-common-actions-15",
+   "category": "l2-common-actions",
+   "level": 2,
+   "english": "Write",
+   "nyanja": "Lemba",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "l3-navigation-and-directions-01",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Where is the toilet?",
+   "nyanja": "Kodi cimbudzi cili kuti?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "l3-navigation-and-directions-02",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Where is the bus station?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-03",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Where is the market?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-04",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Where is the hospital?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-05",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Where is the nearest shop?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-06",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "How do I get there?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-07",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Turn left",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-08",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Turn right",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-09",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Go straight",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-10",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Stop here",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-11",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Come here",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-12",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Follow me",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-13",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "I am lost",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-14",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Is it far?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-15",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Is it near?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-16",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Where are you going?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-17",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "I am going home",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-18",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "Take me to the market",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-19",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "I need a taxi",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-navigation-and-directions-20",
+   "category": "l3-navigation-and-directions",
+   "level": 3,
+   "english": "How long does it take?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-01",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "How much is this?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-02",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "How much does it cost?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-03",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "That is too expensive",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-04",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "Do you have a cheaper one?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-05",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "I want to buy this",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-06",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "I don't want this",
+   "nyanja": "Sinifuna ici",
+   "status": "review",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "note": "Printed as Sinifuna ici. Compare Sindifuna ziwiri (I don't want two), which suggests a typo. Confirm with a speaker."
+  },
+  {
+   "id": "l3-shopping-07",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "Do you have water?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-08",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "Do you have change?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-09",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "Can I pay now?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-10",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "Where can I pay?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-11",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "I need a bag",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-12",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "I am just looking",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-13",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "Can you help me?",
+   "nyanja": "Munganithandizeko?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "sourceEnglish": "Can you help me please?"
+  },
+  {
+   "id": "l3-shopping-14",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "I have no money",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-shopping-15",
+   "category": "l3-shopping",
+   "level": 3,
+   "english": "Thank you for your help",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-01",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "What is this?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-02",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Who is that?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-03",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Where are you?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-04",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Where do you live?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-05",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Where are you going?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-06",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "What are you doing?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-07",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "What do you want?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-08",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Why are you here?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-09",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "When are you coming?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-10",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "How do you know?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-11",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Do you understand?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-12",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Can you speak English?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-13",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Can you speak Nyanja?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-14",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "What does this mean?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-questions-15",
+   "category": "l3-questions",
+   "level": 3,
+   "english": "Can you repeat that?",
+   "nyanja": "Pepani bwelezamponi",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "sourceEnglish": "Please repeat / I beg your pardon"
+  },
+  {
+   "id": "l3-daily-activities-01",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am eating",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-02",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am drinking water",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-03",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am sleeping",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-04",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am working",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-05",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am studying",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-06",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am cooking",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-07",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am cleaning",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-08",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am going to school",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-09",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am going to work",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-10",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am going home",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-11",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am watching television",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-12",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am listening to music",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-13",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am playing football",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-14",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am reading a book",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l3-daily-activities-15",
+   "category": "l3-daily-activities",
+   "level": 3,
+   "english": "I am learning Nyanja",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-01",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "How was your day?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-02",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "My day was good",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-03",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "What did you do today?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-04",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "I went to work",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-05",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "I went to school",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-06",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "What are you doing tomorrow?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-07",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "I am going to see my friend",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-08",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "Do you want to come with me?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-09",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "What time should we meet?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-10",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "Let's meet tomorrow",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-11",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "I will call you later",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-12",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "I haven't seen you in a long time",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-13",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "I missed you",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-14",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "It was nice seeing you",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-social-conversations-15",
+   "category": "l4-social-conversations",
+   "level": 4,
+   "english": "Have a safe journey",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-01",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am very happy",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-02",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am feeling tired",
+   "nyanja": "Ndalema",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   },
+   "sourceEnglish": "I am tired"
+  },
+  {
+   "id": "l4-feelings-and-opinions-03",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am not feeling well",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-04",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am worried",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-05",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am excited",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-06",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am scared",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-07",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am angry",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-08",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I am confused",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-09",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I think this is good",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-10",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I don't think so",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-11",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I agree with you",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-12",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I disagree with you",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-13",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I like this place",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-14",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "I don't like this food",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-feelings-and-opinions-15",
+   "category": "l4-feelings-and-opinions",
+   "level": 4,
+   "english": "What do you think?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-01",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "What time is it?",
+   "nyanja": "Nthawi ili bwanji?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 25
+   }
+  },
+  {
+   "id": "l4-time-and-plans-02",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "It is early",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-03",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "It is late",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-04",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I will come tomorrow",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-05",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I came yesterday",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-06",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I am leaving now",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-07",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I will be back soon",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-08",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "Wait for me",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-09",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I am running late",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-10",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I will see you next week",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-11",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "What are your plans?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-12",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "Are you free tomorrow?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-13",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I am busy today",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-14",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "We can go together",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-time-and-plans-15",
+   "category": "l4-time-and-plans",
+   "level": 4,
+   "english": "I will let you know",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-01",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I need help",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-02",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "Please help me",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-03",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I am sick",
+   "nyanja": "Ndimvera kudwala",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   },
+   "sourceEnglish": "I feel sick"
+  },
+  {
+   "id": "l4-health-and-emergencies-04",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I have a headache",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-05",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "My stomach hurts",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-06",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I need a doctor",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-07",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "Where is the hospital?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-08",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "Call an ambulance",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-09",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I need medicine",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-10",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I feel better now",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-11",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I am allergic to this",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-12",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I cannot breathe properly",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-13",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "I have lost my phone",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-14",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "Someone has stolen my bag",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l4-health-and-emergencies-15",
+   "category": "l4-health-and-emergencies",
+   "level": 4,
+   "english": "Please call the police",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-01",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I have been learning Nyanja for a few months",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-02",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I understand a little, but I cannot speak fluently yet",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-03",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "Could you please speak more slowly?",
+   "nyanja": "Mungalankhuleko pang'ono pang'ono",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "sourceEnglish": "Would you speak more slowly"
+  },
+  {
+   "id": "l5-complex-conversations-04",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I would like to improve my pronunciation",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-05",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "Can you explain what that word means?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-06",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I have never been here before",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-07",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "This is my first time visiting Zambia",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-08",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I grew up in England, but my family is from Zambia",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-09",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I would like to learn more about Zambian culture",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-10",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I find it easier to understand than to speak",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-11",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "Sometimes I forget the words I have learned",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-12",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I am trying to practise every day",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-13",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "Please correct me if I make a mistake",
+   "nyanja": "Muzindikonza ngati ndakamba molakwa",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   },
+   "sourceEnglish": "Please correct me if I say something wrong"
+  },
+  {
+   "id": "l5-complex-conversations-14",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I understand what you are saying",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-complex-conversations-15",
+   "category": "l5-complex-conversations",
+   "level": 5,
+   "english": "I am not sure how to explain it",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-01",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "Yesterday I went to the market with my family",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-02",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "When I was younger, I used to play football every day",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-03",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "Last year I visited my grandparents",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-04",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "I have always wanted to learn another language",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-05",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "When I arrived, everyone was waiting for me",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-06",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "I was tired because I had been working all day",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-07",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "We spent the afternoon talking and eating together",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-08",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "I remember visiting this place when I was a child",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-09",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "That was one of the best days of my life",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-storytelling-and-experiences-10",
+   "category": "l5-storytelling-and-experiences",
+   "level": 5,
+   "english": "I hope I can visit again next year",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-01",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "I believe learning languages is important",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-02",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "In my opinion, this is the best option",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-03",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "I understand your point, but I disagree",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-04",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "There are several reasons why I think this",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-05",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "It depends on the situation",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-06",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "I would prefer to do something different",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-07",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "I think we should discuss this first",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-08",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "I am not completely sure about that",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-09",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "Could you explain your reasoning?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-opinions-and-explanations-10",
+   "category": "l5-opinions-and-explanations",
+   "level": 5,
+   "english": "That makes sense to me",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-01",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "If I have enough money, I will travel next month",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-02",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "If it rains tomorrow, we will stay at home",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-03",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I would have come earlier, but I was working",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-04",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "Even though I was tired, I decided to continue",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-05",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I need to find somewhere to stay for the night",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-06",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "Could you recommend a good place to eat?",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-07",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I would appreciate it if you could help me",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-08",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "Please let me know when you arrive safely",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-09",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I have been waiting here for almost an hour",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-10",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I will contact you as soon as I have more information",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-11",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I wish I had started learning Nyanja earlier",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-12",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I am looking forward to meeting your family",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-13",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I would like to know more about the local traditions",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-14",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "Thank you for taking the time to explain everything",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "l5-real-world-situations-15",
+   "category": "l5-real-world-situations",
+   "level": 5,
+   "english": "I hope we can speak again sometime soon",
+   "nyanja": null,
+   "status": "pending"
+  },
+  {
+   "id": "kit-greetings-people-01",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "Welcome",
+   "nyanja": "Fikani",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-greetings-people-02",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "How are you, Mother?",
+   "nyanja": "Muli bwanji Mai?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-greetings-people-03",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "How are you, Father?",
+   "nyanja": "Muli bwanji Tate?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-greetings-people-04",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "Man",
+   "nyanja": "Mwamuna",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-greetings-people-05",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "Woman",
+   "nyanja": "Mkazi",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-greetings-people-06",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "Children",
+   "nyanja": "Ana",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "kit-greetings-people-07",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "Stranger",
+   "nyanja": "Mlendo",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-greetings-people-08",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "Who?",
+   "nyanja": "Ndani",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-greetings-people-09",
+   "category": "kit-greetings-people",
+   "level": 0,
+   "english": "News",
+   "nyanja": "Nkhani",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-needs-01",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "I want food",
+   "nyanja": "Ndifuna cakudya",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-needs-02",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "I want to sleep",
+   "nyanja": "Ndifuna kugona",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-needs-03",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "I want hot water",
+   "nyanja": "Ndifuna madzi akupya",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-needs-04",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "I want cold water",
+   "nyanja": "Ndifuna madzi ozizira",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-needs-05",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "Give me soap",
+   "nyanja": "Ndipatseko sopo",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-needs-06",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "Give me water to drink",
+   "nyanja": "Ndipatseko madzi akumwa",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-needs-07",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "I feel pain",
+   "nyanja": "Ndibvera kupweteka",
+   "status": "review",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   },
+   "note": "Printed as Ndibvera. Compare Ndimvera kudwala (I feel sick), which suggests a typo. Confirm with a speaker."
+  },
+  {
+   "id": "kit-needs-08",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "Hunger",
+   "nyanja": "Njala",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "kit-needs-09",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "Thirst",
+   "nyanja": "Ludzu",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "kit-needs-10",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "To cook",
+   "nyanja": "Kuphika",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "kit-needs-11",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "To rest",
+   "nyanja": "Kupumula",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "kit-needs-12",
+   "category": "kit-needs",
+   "level": 0,
+   "english": "House",
+   "nyanja": "Nyumba",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "kit-travel-market-01",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "Where is the bus / taxi going?",
+   "nyanja": "Kodi basi/taksi ipita kuti?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-travel-market-02",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "How far?",
+   "nyanja": "Kodi ndi kutali bwanji?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-travel-market-03",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "When is it leaving?",
+   "nyanja": "Ipita liti?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 4
+   }
+  },
+  {
+   "id": "kit-travel-market-04",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "Give me change",
+   "nyanja": "Ndipatseni cenji",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-travel-market-05",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "I want to buy oranges",
+   "nyanja": "Ndifuna kugula malalanje",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-travel-market-06",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "I want to buy bananas",
+   "nyanja": "Ndifuna kugula nthoci",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-travel-market-07",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "Where?",
+   "nyanja": "Kuti?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 7
+   }
+  },
+  {
+   "id": "kit-travel-market-08",
+   "category": "kit-travel-market",
+   "level": 0,
+   "english": "Work",
+   "nyanja": "Nchito",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-01",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "I don't speak Nyanja well",
+   "nyanja": "Sindilankhula bwino cinyanja",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-02",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "But I am trying to learn",
+   "nyanja": "Koma ndiyesa kuphunzira",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-03",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "I am sorry, I don't understand",
+   "nyanja": "Pepani sindimvera",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-04",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "How do you say...?",
+   "nyanja": "Mukamba bwanji",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-05",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "Did you understand me?",
+   "nyanja": "Kodi munandimvetsa?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-06",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "Did I pronounce it correctly?",
+   "nyanja": "Kodi ndinanena bwino?",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 5
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-07",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "Learn",
+   "nyanja": "Phunzira",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-08",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "Again",
+   "nyanja": "Bwerezanso",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-09",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "Slowly",
+   "nyanja": "Pang'ono pang'ono",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-10",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "A little",
+   "nyanja": "Pang'ono",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  },
+  {
+   "id": "kit-talking-about-talking-11",
+   "category": "kit-talking-about-talking",
+   "level": 0,
+   "english": "Why?",
+   "nyanja": "Cifukwa",
+   "status": "verified",
+   "source": {
+    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
+    "page": 6
+   }
+  }
+ ]
+}
