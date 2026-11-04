@@ -6,11 +6,25 @@ Nyanja is filled in ONLY where the Peace Corps/Zambia PST 1995 Special Lessons
 speaker verifies it. Spelling is kept exactly as printed (1995 orthography uses
 "c" where modern spelling often writes "ch", e.g. cakudya / chakudya).
 
+Second source: the Wikitravel "Nyanja phrasebook" (CC BY-SA 3.0). Entries from it are
+marked src="wt", keep the page's spelling, and are flagged as Malawi Chichewa forms.
+Where both sources translate a phrase, the closer English match is primary and the
+other appears in "alt".
+
 Run:  python3 tools/build_vocab.py
 """
 import json, re, pathlib
 
 SRC = "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja"
+WT = "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+SOURCES = {"pc": SRC, "wt": WT}
+# Wikitravel says its phrases use the Malawi (Chichewa) dialect unless noted;
+# ChewaTalk targets Zambian (Lusaka) Nyanja, so every Wikitravel entry carries this flag.
+WT_DIALECT = "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+
+def W(ny, **k):
+    """A translation taken from the Wikitravel phrasebook."""
+    return dict(nyanja=ny, src="wt", **k)
 
 LEVELS = {
     1: ("Beginner", "First Words"),
@@ -56,40 +70,89 @@ PHRASES = {
 
 # (level, category, english) -> dict(nyanja, page, [sourceEnglish], [note], [status])
 T = {
- (1,"Greetings","Hello"): dict(nyanja="Bwanji?", page=4, note="The source gives Bwanji? for Hello. It literally asks 'how?' and works as a casual greeting."),
- (1,"Greetings","How are you?"): dict(nyanja="Muli bwanji?", page=4, note="Plural or respectful. Informal, to one person: Uli bwanji?"),
- (1,"Greetings","I am fine"): dict(nyanja="Ndiri bwino", page=11),
- (1,"Greetings","Thank you"): dict(nyanja="Zikomo", page=6),
- (1,"Greetings","Sorry"): dict(nyanja="Pepani", page=5, sourceEnglish="I am sorry"),
+ (1,"Greetings","Hello"): dict(nyanja="Bwanji?", page=4, alt=[("Moni", "wt")], note="The source gives Bwanji? for Hello. It literally asks 'how?' and works as a casual greeting."),
+ (1,"Greetings","How are you?"): dict(nyanja="Muli bwanji?", page=4, also="wt", note="Plural or respectful. Informal, to one person: Uli bwanji?"),
+ (1,"Greetings","I am fine"): dict(nyanja="Ndiri bwino", page=11, alt=[("Ndili bwino", "wt")]),
+ (1,"Greetings","Thank you"): dict(nyanja="Zikomo", page=6, also="wt"),
+ (1,"Greetings","Sorry"): dict(nyanja="Pepani", page=5, also="wt", sourceEnglish="I am sorry"),
  (1,"Greetings","Excuse me"): dict(nyanja="Ndikululukileni", page=5, note="Page 7 spells it Ndikululukireni."),
- (1,"Introductions","My name is..."): dict(nyanja="Dzina langa ndine...", page=4),
- (1,"Basic Words","Yes"): dict(nyanja="Inde", page=6),
- (1,"Basic Words","No"): dict(nyanja="Iai-ai", page=6, status="review", note="Faint print in the scan. Confirm the spelling with a speaker."),
+ (1,"Introductions","My name is..."): dict(nyanja="Dzina langa ndine...", page=4, alt=[("Dzina langa ndi...", "wt")]),
+ (1,"Basic Words","Yes"): dict(nyanja="Inde", page=6, alt=[("Ee / Eya", "wt")]),
+ (1,"Basic Words","No"): dict(nyanja="Ayi", src="wt", alt=[("Iyayi", "wt")], note="Wikitravel: ayi is more polite, iyayi is stronger. The Peace Corps scan prints a faint Iai-ai."),
  (1,"Basic Words","Maybe"): dict(nyanja="Kapena", page=6, sourceEnglish="Maybe / Perhaps"),
  (1,"Basic Words","Hot"): dict(nyanja="Kupya", page=7, note="Verb form: to be hot."),
  (1,"Basic Words","Cold"): dict(nyanja="Kuzizira", page=7, note="Verb form: to be cold."),
- (1,"Numbers","One"): dict(nyanja="Cimodzi", page=5, sourceEnglish="I want one: Ndifuna cimodzi", note="Number words change with the noun class. This is the form from the source sentence."),
- (1,"Numbers","Two"): dict(nyanja="Ziwiri", page=5, sourceEnglish="I don't want two: Sindifuna ziwiri", note="Number words change with the noun class. This is the form from the source sentence."),
+ (1,"Numbers","One"): dict(nyanja="Cimodzi", page=5, alt=[("Modzi", "wt")], sourceEnglish="I want one: Ndifuna cimodzi", note="Number words change with the noun class. This is the form from the source sentence."),
+ (1,"Numbers","Two"): dict(nyanja="Ziwiri", page=5, alt=[("Wiri", "wt")], sourceEnglish="I don't want two: Sindifuna ziwiri", note="Number words change with the noun class. This is the form from the source sentence."),
  (2,"Family","Mother"): dict(nyanja="Mai", page=6),
  (2,"Family","Father"): dict(nyanja="Tate", page=6),
  (2,"Family","Brother"): dict(nyanja="Mlongo", page=6, note="The source gives Mlongo for both brother and sister."),
  (2,"Family","Sister"): dict(nyanja="Mlongo", page=6, note="The source gives Mlongo for both brother and sister."),
- (2,"Food and Drinks","Water"): dict(nyanja="Madzi", page=4),
- (2,"Food and Drinks","Food"): dict(nyanja="Cakudya", page=6, note="1995 spelling. Modern spelling: chakudya."),
+ (2,"Food and Drinks","Water"): dict(nyanja="Madzi", page=4, also="wt"),
+ (2,"Food and Drinks","Food"): dict(nyanja="Cakudya", page=6, alt=[("Chakudya", "wt")], note="1995 spelling. Modern spelling: chakudya."),
  (2,"Common Actions","Drink"): dict(nyanja="Imwa", page=6),
  (2,"Common Actions","Sleep"): dict(nyanja="Kugona", page=7, sourceEnglish="To sleep"),
  (2,"Common Actions","Go"): dict(nyanja="Pita", page=7),
  (2,"Common Actions","Speak"): dict(nyanja="Lankhula", page=6),
  (2,"Common Actions","Write"): dict(nyanja="Lemba", page=6),
- (3,"Navigation and Directions","Where is the toilet?"): dict(nyanja="Kodi cimbudzi cili kuti?", page=4),
+ (3,"Navigation and Directions","Where is the toilet?"): dict(nyanja="Kodi cimbudzi cili kuti?", page=4, alt=[("Chimbudzi chili kuti?", "wt")]),
  (3,"Shopping","I don't want this"): dict(nyanja="Sinifuna ici", page=5, status="review", note="Printed as Sinifuna ici. Compare Sindifuna ziwiri (I don't want two), which suggests a typo. Confirm with a speaker."),
  (3,"Shopping","Can you help me?"): dict(nyanja="Munganithandizeko?", page=5, sourceEnglish="Can you help me please?"),
  (3,"Questions","Can you repeat that?"): dict(nyanja="Pepani bwelezamponi", page=5, sourceEnglish="Please repeat / I beg your pardon"),
  (4,"Feelings and Opinions","I am feeling tired"): dict(nyanja="Ndalema", page=4, sourceEnglish="I am tired"),
- (4,"Time and Plans","What time is it?"): dict(nyanja="Nthawi ili bwanji?", page=25),
- (4,"Health and Emergencies","I am sick"): dict(nyanja="Ndimvera kudwala", page=4, sourceEnglish="I feel sick"),
+ (4,"Time and Plans","What time is it?"): dict(nyanja="Nthawi ili bwanji?", page=25, also="wt"),
+ (4,"Health and Emergencies","I am sick"): dict(nyanja="Ndikudwala", src="wt", alt=[("Ndimvera kudwala", "pc")], note="Peace Corps gives Ndimvera kudwala for \"I feel sick\"."),
  (5,"Complex Conversations","Could you please speak more slowly?"): dict(nyanja="Mungalankhuleko pang'ono pang'ono", page=5, sourceEnglish="Would you speak more slowly"),
  (5,"Complex Conversations","Please correct me if I make a mistake"): dict(nyanja="Muzindikonza ngati ndakamba molakwa", page=5, sourceEnglish="Please correct me if I say something wrong"),
+ # ── From Wikitravel ──
+ (1,"Greetings","Good morning"): W("Mwauka bwanji?", alt=[("Mwadzuka bwanji?", "wt")], note="Reply: Ndadzuka bwino."),
+ (1,"Greetings","Good afternoon"): W("Mwaswela bwanji?", note="Reply: Ndaswela bwino."),
+ (1,"Greetings","Good evening"): W("Mwachoma bwanji?", note="Reply: Ndachoma bwino."),
+ (1,"Greetings","Good night"): W("Usiku wabwino"),
+ (1,"Greetings","Goodbye"): W("Ndapita", note="Literally \"I'm going\". To someone staying: Tsalani bwino (stay well)."),
+ (1,"Greetings","See you later"): W("Tionana", sourceEnglish="See you later / We shall meet"),
+ (1,"Greetings","Please"): W("Chonde"),
+ (1,"Introductions","What is your name?"): W("Dzina lanu ndani?", alt=[("Dzina lanu ndi yani?", "wt")]),
+ (1,"Basic Words","Bad"): W("Choipa", note="For a thing. For a person: woipa."),
+ (1,"Basic Words","Today"): W("Lero"),
+ (1,"Basic Words","Tomorrow"): W("Mawa"),
+ (1,"Numbers","Three"): W("Tatu", note="Number stems take a prefix that matches the noun, e.g. anthu anayi (four people)."),
+ (1,"Numbers","Four"): W("Nayi", note="Number stems take a prefix that matches the noun, e.g. anthu anayi (four people)."),
+ (1,"Numbers","Five"): W("Sanu", note="Number stems take a prefix that matches the noun."),
+ (1,"Numbers","Six"): W("Sanu n'chimodzi", note="Literally \"five and one\"."),
+ (1,"Numbers","Seven"): W("Sanu n'ziwiri", note="Literally \"five and two\"."),
+ (1,"Numbers","Eight"): W("Sanu n'zitatu", note="Literally \"five and three\"."),
+ (1,"Numbers","Nine"): W("Sanu n'zinayi", note="Literally \"five and four\"."),
+ (1,"Numbers","Ten"): W("Khumi"),
+ (2,"Food and Drinks","Bread"): W("Buledi"),
+ (2,"Food and Drinks","Rice"): W("Mpunga"),
+ (2,"Food and Drinks","Chicken"): W("Nkhuku"),
+ (2,"Food and Drinks","Fish"): W("Nsomba"),
+ (2,"Food and Drinks","Tea"): W("Tiyi"),
+ (2,"Food and Drinks","Salt"): W("Mchere"),
+ (2,"Food and Drinks","Egg"): W("Mazira", note="Wikitravel lists the plural, eggs."),
+ (2,"Food and Drinks","Vegetables"): W("Masamba"),
+ (2,"Colours","Red"): W("Wofiira", note="Wikitravel notes it is also used, impolitely, for a white person."),
+ (2,"Colours","Blue"): W("Kamtambo"),
+ (2,"Colours","Green"): W("Abiriwiri"),
+ (2,"Colours","Yellow"): W("Chikasu"),
+ (2,"Colours","Black"): W("Kuda", note="Colour words change form to match the noun."),
+ (2,"Colours","White"): W("Yera", note="Colour words change form to match the noun."),
+ (2,"Colours","Orange"): W("Ndimwi"),
+ (2,"Common Actions","Run"): W("Thamanga"),
+ (3,"Navigation and Directions","Turn left"): W("Khotani kumanzere", alt=[("Mukhote kumanzere", "wt")]),
+ (3,"Navigation and Directions","Turn right"): W("Khotani kumanja", alt=[("Mukhote kumanja", "wt")]),
+ (3,"Navigation and Directions","I am lost"): W("Ndasochera"),
+ (3,"Shopping","How much is this?"): W("Ndi ndalama zingati ichi?"),
+ (3,"Shopping","That is too expensive"): W("Chikudula kwambiri"),
+ (3,"Questions","What is this?"): W("Nichani ichi?", sourceEnglish="What is this/that called?"),
+ (3,"Questions","Can you speak English?"): W("Mumalankhula chizungu?", sourceEnglish="Do you speak English?", alt=[("Mumalankhula chingelesi?", "wt")]),
+ (4,"Social Conversations","Have a safe journey"): W("Yendani bwino", alt=[("Muyende bwino", "wt")]),
+ (4,"Health and Emergencies","I need help"): W("Mundithandize", sourceEnglish="I need your help", alt=[("Thandizeni", "wt")]),
+ (4,"Health and Emergencies","Please help me"): W("Mundithandize!", sourceEnglish="Help me!"),
+ (4,"Health and Emergencies","I have a headache"): W("Ndikudwala mutu", sourceEnglish="Head ache"),
+ (4,"Health and Emergencies","My stomach hurts"): W("Kupweteka m'mimba", sourceEnglish="Stomach ache"),
+ (4,"Health and Emergencies","I need a doctor"): W("Ndikufuna dokotala"),
 }
 
 # Bonus track: Survival Kit entries straight from pages 4-7 that are not in the phrase list.
@@ -125,6 +188,29 @@ KIT = {
  ],
 }
 
+KIT_WT = {
+ "Getting By": [
+  ("Stay well", "Tsalani bwino"), ("Sleep well", "Gonani bwino"), ("I don't understand", "Sindimvetsa"),
+  ("I know", "Ndimadziwa"), ("I don't know", "Sindidziwa"), ("I heard", "Ndamva"), ("What did you say?", "Mwati chani?"),
+  ("Truly / Really", "Ndithu"), ("I'm full", "Ndakhuta"), ("Leave me alone", "Ndilekeni"),
+  ("It's an emergency", "N'zofunika mwamsanga"), ("Hospital", "Chipatala"), ("Sir", "Abambo"), ("Madam", "Amayi"),
+ ],
+ "Food Words": [
+  ("Maize porridge", "Nsima"), ("Beans", "Nyemba"), ("Coffee", "Khofi"), ("Beef", "Nyama ya ng'ombe"),
+  ("Maize drink", "Maheu"), ("It was delicious", "Chakudya chinali bwino"),
+ ],
+ "Days & Time": [
+  ("Monday", "Lolemba"), ("Tuesday", "Lachiwiri"), ("Wednesday", "Lachitatu"), ("Thursday", "Lachinayi"),
+  ("Friday", "Lachisanu"), ("Saturday", "Loweluka"), ("Sunday", "Lamulungu"), ("Yesterday", "Dzulo"),
+  ("Now", "Tsopano"), ("Morning", "M'mawa"), ("Afternoon", "Masana"), ("Evening", "Madzulo"), ("Night", "Usiku"),
+ ],
+}
+
+def source(key, page=None):
+    d = {"doc": SOURCES[key]}
+    if page: d["page"] = page
+    return d
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -138,7 +224,10 @@ for lvl, cats in PHRASES.items():
                   "english": en, "nyanja": None, "status": "pending"}
             if t:
                 it["nyanja"] = t["nyanja"]; it["status"] = t.get("status", "verified")
-                it["source"] = {"doc": SRC, "page": t["page"]}
+                it["source"] = source(t.get("src", "pc"), t.get("page"))
+                if t.get("also"): it["alsoIn"] = SOURCES[t["also"]]
+                if t.get("alt"): it["alt"] = [{"nyanja": n, "doc": SOURCES[sc]} for n, sc in t["alt"]]
+                if t.get("src") == "wt": it["dialect"] = WT_DIALECT
                 for k in ("sourceEnglish", "note"):
                     if k in t: it[k] = t[k]
             items.append(it)
@@ -153,6 +242,13 @@ for cat, rows in KIT.items():
         if extra and extra.startswith("review:"):
             it["status"] = "review"; it["note"] = extra[7:]
         items.append(it)
+
+for cat, rows in KIT_WT.items():
+    cid = f"kit-{slug(cat)}"
+    categories.append({"id": cid, "track": "kit", "level": 0, "name": cat})
+    for i, (en, ny) in enumerate(rows, 1):
+        items.append({"id": f"{cid}-{i:02d}", "category": cid, "level": 0, "english": en, "nyanja": ny,
+                      "status": "verified", "source": source("wt"), "dialect": WT_DIALECT})
 
 out = {"levels": [{"level": k, "name": v[0], "title": v[1]} for k, v in LEVELS.items()],
        "categories": categories, "items": items}

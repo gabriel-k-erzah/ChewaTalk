@@ -176,6 +176,24 @@
    "track": "kit",
    "level": 0,
    "name": "Talking About Talking"
+  },
+  {
+   "id": "kit-getting-by",
+   "track": "kit",
+   "level": 0,
+   "name": "Getting By"
+  },
+  {
+   "id": "kit-food-words",
+   "track": "kit",
+   "level": 0,
+   "name": "Food Words"
+  },
+  {
+   "id": "kit-days-time",
+   "track": "kit",
+   "level": 0,
+   "name": "Days & Time"
   }
  ],
  "items": [
@@ -190,6 +208,12 @@
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 4
    },
+   "alt": [
+    {
+     "nyanja": "Moni",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
    "note": "The source gives Bwanji? for Hello. It literally asks 'how?' and works as a casual greeting."
   },
   {
@@ -205,48 +229,83 @@
    "category": "l1-greetings",
    "level": 1,
    "english": "Good morning",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mwauka bwanji?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "alt": [
+    {
+     "nyanja": "Mwadzuka bwanji?",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Reply: Ndadzuka bwino."
   },
   {
    "id": "l1-greetings-04",
    "category": "l1-greetings",
    "level": 1,
    "english": "Good afternoon",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mwaswela bwanji?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Reply: Ndaswela bwino."
   },
   {
    "id": "l1-greetings-05",
    "category": "l1-greetings",
    "level": 1,
    "english": "Good evening",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mwachoma bwanji?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Reply: Ndachoma bwino."
   },
   {
    "id": "l1-greetings-06",
    "category": "l1-greetings",
    "level": 1,
    "english": "Good night",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Usiku wabwino",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l1-greetings-07",
    "category": "l1-greetings",
    "level": 1,
    "english": "Goodbye",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Ndapita",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Literally \"I'm going\". To someone staying: Tsalani bwino (stay well)."
   },
   {
    "id": "l1-greetings-08",
    "category": "l1-greetings",
    "level": 1,
    "english": "See you later",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Tionana",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "sourceEnglish": "See you later / We shall meet"
   },
   {
    "id": "l1-greetings-09",
@@ -259,6 +318,7 @@
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 4
    },
+   "alsoIn": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)",
    "note": "Plural or respectful. Informal, to one person: Uli bwanji?"
   },
   {
@@ -271,7 +331,13 @@
    "source": {
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 11
-   }
+   },
+   "alt": [
+    {
+     "nyanja": "Ndili bwino",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ]
   },
   {
    "id": "l1-greetings-11",
@@ -283,7 +349,8 @@
    "source": {
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 6
-   }
+   },
+   "alsoIn": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
   },
   {
    "id": "l1-greetings-12",
@@ -298,8 +365,12 @@
    "category": "l1-greetings",
    "level": 1,
    "english": "Please",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Chonde",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l1-greetings-14",
@@ -312,6 +383,7 @@
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 5
    },
+   "alsoIn": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)",
    "sourceEnglish": "I am sorry"
   },
   {
@@ -332,8 +404,18 @@
    "category": "l1-introductions",
    "level": 1,
    "english": "What is your name?",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Dzina lanu ndani?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "alt": [
+    {
+     "nyanja": "Dzina lanu ndi yani?",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l1-introductions-02",
@@ -345,7 +427,13 @@
    "source": {
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 4
-   }
+   },
+   "alt": [
+    {
+     "nyanja": "Dzina langa ndi...",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ]
   },
   {
    "id": "l1-introductions-03",
@@ -421,20 +509,32 @@
    "source": {
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 6
-   }
+   },
+   "alt": [
+    {
+     "nyanja": "Ee / Eya",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ]
   },
   {
    "id": "l1-basic-words-02",
    "category": "l1-basic-words",
    "level": 1,
    "english": "No",
-   "nyanja": "Iai-ai",
-   "status": "review",
+   "nyanja": "Ayi",
+   "status": "verified",
    "source": {
-    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
-    "page": 6
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
    },
-   "note": "Faint print in the scan. Confirm the spelling with a speaker."
+   "alt": [
+    {
+     "nyanja": "Iyayi",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Wikitravel: ayi is more polite, iyayi is stronger. The Peace Corps scan prints a faint Iai-ai."
   },
   {
    "id": "l1-basic-words-03",
@@ -462,8 +562,13 @@
    "category": "l1-basic-words",
    "level": 1,
    "english": "Bad",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Choipa",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "For a thing. For a person: woipa."
   },
   {
    "id": "l1-basic-words-06",
@@ -544,16 +649,24 @@
    "category": "l1-basic-words",
    "level": 1,
    "english": "Today",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Lero",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l1-basic-words-15",
    "category": "l1-basic-words",
    "level": 1,
    "english": "Tomorrow",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mawa",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l1-numbers-01",
@@ -566,6 +679,12 @@
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 5
    },
+   "alt": [
+    {
+     "nyanja": "Modzi",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
    "sourceEnglish": "I want one: Ndifuna cimodzi",
    "note": "Number words change with the noun class. This is the form from the source sentence."
   },
@@ -580,6 +699,12 @@
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 5
    },
+   "alt": [
+    {
+     "nyanja": "Wiri",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
    "sourceEnglish": "I don't want two: Sindifuna ziwiri",
    "note": "Number words change with the noun class. This is the form from the source sentence."
   },
@@ -588,64 +713,103 @@
    "category": "l1-numbers",
    "level": 1,
    "english": "Three",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Tatu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Number stems take a prefix that matches the noun, e.g. anthu anayi (four people)."
   },
   {
    "id": "l1-numbers-04",
    "category": "l1-numbers",
    "level": 1,
    "english": "Four",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Nayi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Number stems take a prefix that matches the noun, e.g. anthu anayi (four people)."
   },
   {
    "id": "l1-numbers-05",
    "category": "l1-numbers",
    "level": 1,
    "english": "Five",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Sanu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Number stems take a prefix that matches the noun."
   },
   {
    "id": "l1-numbers-06",
    "category": "l1-numbers",
    "level": 1,
    "english": "Six",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Sanu n'chimodzi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Literally \"five and one\"."
   },
   {
    "id": "l1-numbers-07",
    "category": "l1-numbers",
    "level": 1,
    "english": "Seven",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Sanu n'ziwiri",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Literally \"five and two\"."
   },
   {
    "id": "l1-numbers-08",
    "category": "l1-numbers",
    "level": 1,
    "english": "Eight",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Sanu n'zitatu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Literally \"five and three\"."
   },
   {
    "id": "l1-numbers-09",
    "category": "l1-numbers",
    "level": 1,
    "english": "Nine",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Sanu n'zinayi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Literally \"five and four\"."
   },
   {
    "id": "l1-numbers-10",
    "category": "l1-numbers",
    "level": 1,
    "english": "Ten",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Khumi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-family-01",
@@ -795,7 +959,8 @@
    "source": {
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 4
-   }
+   },
+   "alsoIn": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
   },
   {
    "id": "l2-food-and-drinks-02",
@@ -808,6 +973,12 @@
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 6
    },
+   "alt": [
+    {
+     "nyanja": "Chakudya",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
    "note": "1995 spelling. Modern spelling: chakudya."
   },
   {
@@ -815,32 +986,48 @@
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Bread",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Buledi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-food-and-drinks-04",
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Rice",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mpunga",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-food-and-drinks-05",
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Chicken",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Nkhuku",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-food-and-drinks-06",
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Fish",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Nsomba",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-food-and-drinks-07",
@@ -863,8 +1050,12 @@
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Tea",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Tiyi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-food-and-drinks-10",
@@ -879,16 +1070,25 @@
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Salt",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mchere",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-food-and-drinks-12",
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Egg",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mazira",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Wikitravel lists the plural, eggs."
   },
   {
    "id": "l2-food-and-drinks-13",
@@ -911,8 +1111,12 @@
    "category": "l2-food-and-drinks",
    "level": 2,
    "english": "Vegetables",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Masamba",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-food-and-drinks-16",
@@ -959,56 +1163,87 @@
    "category": "l2-colours",
    "level": 2,
    "english": "Red",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Wofiira",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Wikitravel notes it is also used, impolitely, for a white person."
   },
   {
    "id": "l2-colours-02",
    "category": "l2-colours",
    "level": 2,
    "english": "Blue",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Kamtambo",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-colours-03",
    "category": "l2-colours",
    "level": 2,
    "english": "Green",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Abiriwiri",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-colours-04",
    "category": "l2-colours",
    "level": 2,
    "english": "Yellow",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Chikasu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-colours-05",
    "category": "l2-colours",
    "level": 2,
    "english": "Black",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Kuda",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Colour words change form to match the noun."
   },
   {
    "id": "l2-colours-06",
    "category": "l2-colours",
    "level": 2,
    "english": "White",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Yera",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Colour words change form to match the noun."
   },
   {
    "id": "l2-colours-07",
    "category": "l2-colours",
    "level": 2,
    "english": "Orange",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Ndimwi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-colours-08",
@@ -1240,8 +1475,12 @@
    "category": "l2-common-actions",
    "level": 2,
    "english": "Run",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Thamanga",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l2-common-actions-06",
@@ -1345,7 +1584,13 @@
    "source": {
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 4
-   }
+   },
+   "alt": [
+    {
+     "nyanja": "Chimbudzi chili kuti?",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ]
   },
   {
    "id": "l3-navigation-and-directions-02",
@@ -1392,16 +1637,36 @@
    "category": "l3-navigation-and-directions",
    "level": 3,
    "english": "Turn left",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Khotani kumanzere",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "alt": [
+    {
+     "nyanja": "Mukhote kumanzere",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l3-navigation-and-directions-08",
    "category": "l3-navigation-and-directions",
    "level": 3,
    "english": "Turn right",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Khotani kumanja",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "alt": [
+    {
+     "nyanja": "Mukhote kumanja",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l3-navigation-and-directions-09",
@@ -1440,8 +1705,12 @@
    "category": "l3-navigation-and-directions",
    "level": 3,
    "english": "I am lost",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Ndasochera",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l3-navigation-and-directions-14",
@@ -1504,8 +1773,12 @@
    "category": "l3-shopping",
    "level": 3,
    "english": "How much is this?",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Ndi ndalama zingati ichi?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l3-shopping-02",
@@ -1520,8 +1793,12 @@
    "category": "l3-shopping",
    "level": 3,
    "english": "That is too expensive",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Chikudula kwambiri",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l3-shopping-04",
@@ -1634,8 +1911,13 @@
    "category": "l3-questions",
    "level": 3,
    "english": "What is this?",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Nichani ichi?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "sourceEnglish": "What is this/that called?"
   },
   {
    "id": "l3-questions-02",
@@ -1722,8 +2004,19 @@
    "category": "l3-questions",
    "level": 3,
    "english": "Can you speak English?",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mumalankhula chizungu?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "alt": [
+    {
+     "nyanja": "Mumalankhula chingelesi?",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "sourceEnglish": "Do you speak English?"
   },
   {
    "id": "l3-questions-13",
@@ -1991,8 +2284,18 @@
    "category": "l4-social-conversations",
    "level": 4,
    "english": "Have a safe journey",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Yendani bwino",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "alt": [
+    {
+     "nyanja": "Muyende bwino",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l4-feelings-and-opinions-01",
@@ -2129,7 +2432,8 @@
    "source": {
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 25
-   }
+   },
+   "alsoIn": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
   },
   {
    "id": "l4-time-and-plans-02",
@@ -2248,53 +2552,89 @@
    "category": "l4-health-and-emergencies",
    "level": 4,
    "english": "I need help",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mundithandize",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "alt": [
+    {
+     "nyanja": "Thandizeni",
+     "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "sourceEnglish": "I need your help"
   },
   {
    "id": "l4-health-and-emergencies-02",
    "category": "l4-health-and-emergencies",
    "level": 4,
    "english": "Please help me",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Mundithandize!",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "sourceEnglish": "Help me!"
   },
   {
    "id": "l4-health-and-emergencies-03",
    "category": "l4-health-and-emergencies",
    "level": 4,
    "english": "I am sick",
-   "nyanja": "Ndimvera kudwala",
+   "nyanja": "Ndikudwala",
    "status": "verified",
    "source": {
-    "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
-    "page": 4
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
    },
-   "sourceEnglish": "I feel sick"
+   "alt": [
+    {
+     "nyanja": "Ndimvera kudwala",
+     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja"
+    }
+   ],
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "note": "Peace Corps gives Ndimvera kudwala for \"I feel sick\"."
   },
   {
    "id": "l4-health-and-emergencies-04",
    "category": "l4-health-and-emergencies",
    "level": 4,
    "english": "I have a headache",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Ndikudwala mutu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "sourceEnglish": "Head ache"
   },
   {
    "id": "l4-health-and-emergencies-05",
    "category": "l4-health-and-emergencies",
    "level": 4,
    "english": "My stomach hurts",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Kupweteka m'mimba",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker.",
+   "sourceEnglish": "Stomach ache"
   },
   {
    "id": "l4-health-and-emergencies-06",
    "category": "l4-health-and-emergencies",
    "level": 4,
    "english": "I need a doctor",
-   "nyanja": null,
-   "status": "pending"
+   "nyanja": "Ndikufuna dokotala",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   },
   {
    "id": "l4-health-and-emergencies-07",
@@ -3258,6 +3598,402 @@
     "doc": "Peace Corps/Zambia PST 1995 Special Lessons: Nyanja",
     "page": 6
    }
+  },
+  {
+   "id": "kit-getting-by-01",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "Stay well",
+   "nyanja": "Tsalani bwino",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-02",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "Sleep well",
+   "nyanja": "Gonani bwino",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-03",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "I don't understand",
+   "nyanja": "Sindimvetsa",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-04",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "I know",
+   "nyanja": "Ndimadziwa",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-05",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "I don't know",
+   "nyanja": "Sindidziwa",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-06",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "I heard",
+   "nyanja": "Ndamva",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-07",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "What did you say?",
+   "nyanja": "Mwati chani?",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-08",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "Truly / Really",
+   "nyanja": "Ndithu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-09",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "I'm full",
+   "nyanja": "Ndakhuta",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-10",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "Leave me alone",
+   "nyanja": "Ndilekeni",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-11",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "It's an emergency",
+   "nyanja": "N'zofunika mwamsanga",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-12",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "Hospital",
+   "nyanja": "Chipatala",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-13",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "Sir",
+   "nyanja": "Abambo",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-getting-by-14",
+   "category": "kit-getting-by",
+   "level": 0,
+   "english": "Madam",
+   "nyanja": "Amayi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-food-words-01",
+   "category": "kit-food-words",
+   "level": 0,
+   "english": "Maize porridge",
+   "nyanja": "Nsima",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-food-words-02",
+   "category": "kit-food-words",
+   "level": 0,
+   "english": "Beans",
+   "nyanja": "Nyemba",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-food-words-03",
+   "category": "kit-food-words",
+   "level": 0,
+   "english": "Coffee",
+   "nyanja": "Khofi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-food-words-04",
+   "category": "kit-food-words",
+   "level": 0,
+   "english": "Beef",
+   "nyanja": "Nyama ya ng'ombe",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-food-words-05",
+   "category": "kit-food-words",
+   "level": 0,
+   "english": "Maize drink",
+   "nyanja": "Maheu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-food-words-06",
+   "category": "kit-food-words",
+   "level": 0,
+   "english": "It was delicious",
+   "nyanja": "Chakudya chinali bwino",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-01",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Monday",
+   "nyanja": "Lolemba",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-02",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Tuesday",
+   "nyanja": "Lachiwiri",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-03",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Wednesday",
+   "nyanja": "Lachitatu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-04",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Thursday",
+   "nyanja": "Lachinayi",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-05",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Friday",
+   "nyanja": "Lachisanu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-06",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Saturday",
+   "nyanja": "Loweluka",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-07",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Sunday",
+   "nyanja": "Lamulungu",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-08",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Yesterday",
+   "nyanja": "Dzulo",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-09",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Now",
+   "nyanja": "Tsopano",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-10",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Morning",
+   "nyanja": "M'mawa",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-11",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Afternoon",
+   "nyanja": "Masana",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-12",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Evening",
+   "nyanja": "Madzulo",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
+  },
+  {
+   "id": "kit-days-time-13",
+   "category": "kit-days-time",
+   "level": 0,
+   "english": "Night",
+   "nyanja": "Usiku",
+   "status": "verified",
+   "source": {
+    "doc": "Wikitravel, Nyanja phrasebook (CC BY-SA 3.0, last edited 17 Aug 2021)"
+   },
+   "dialect": "Malawi Chichewa form (Wikitravel). Check the Lusaka Nyanja usage with a speaker."
   }
  ]
 }

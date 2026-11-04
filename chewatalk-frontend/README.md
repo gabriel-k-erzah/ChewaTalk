@@ -29,7 +29,8 @@ Open http://localhost:8790. The data is loaded with `fetch`, so the site needs a
 These follow the project README: **never invent Nyanja.**
 
 - The English phrases come from *ChewaTalk English Phrase List* (levels 1–5).
-- Nyanja is filled in only where *Peace Corps/Zambia PST 1995 Special Lessons: Nyanja* gives it, with the page number. Spelling is kept as printed. That document writes `c` where newer spelling often uses `ch` (cakudya → chakudya).
+- Nyanja is filled in only where *Peace Corps/Zambia PST 1995 Special Lessons: Nyanja* gives it, with the page number.
+- A second source is the Wikitravel *Nyanja phrasebook* (last edited 17 August 2021). Its phrases are marked `src="wt"` in the builder and get a `dialect` flag, because the page says it uses Malawi Chichewa forms unless noted. Where both sources translate a phrase, the closer English match is the main answer and the other is listed under `alt`. Wikitravel text is licensed **CC BY-SA 3.0**, so those entries in `data/vocab.json` are under the same license, and the site credits Wikitravel in the footer. Spelling is kept as printed. That document writes `c` where newer spelling often uses `ch` (cakudya → chakudya).
 - `status` is one of:
   - `verified`: from the source.
   - `review`: the scan is unclear or the source looks like it has a typo. Shown in the phrasebook, kept out of quizzes.

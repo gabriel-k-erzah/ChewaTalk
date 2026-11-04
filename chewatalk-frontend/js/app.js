@@ -19,11 +19,16 @@ const UNLOCK_AT = 0.6;
 const app = document.getElementById('app');
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.random() * (i + 1) | 0; [a[i], a[j]] = [a[j], a[i]]; } return a; };
+// Compare answers ignoring case and punctuation ("Mundithandize" vs "Mundithandize!").
+const norm = s => String(s).toLowerCase().replace(/[^\p{L}\p{N}' ]/gu, '').replace(/\s+/g, ' ').trim();
 const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
 const learnedCount = list => list.filter(i => store.isLearned(i.id)).length;
 const pad = n => String(n).padStart(2, '0');
 const letters = s => [...s].map((ch, i) => ch === ' ' ? ' ' : `<span style="--i:${i}">${esc(ch)}</span>`).join('');
-const srcLine = it => it.source ? `Source p.${it.source.page}` : '';
+const isWT = it => it.source?.doc.startsWith('Wikitravel');
+const srcLine = it => !it.source ? '' : isWT(it) ? 'Wikitravel' : `Peace Corps p.${it.source.page}`;
+const altLine = it => it.alt?.length ? `Also: ${it.alt.map(a => esc(a.nyanja)).join(' · ')}` : '';
+const srcFull = it => !it.source ? '' : `${esc(it.source.doc)}${it.source.page ? `, page ${it.source.page}` : ''}.`;
 const artFor = cat => cat.track === 'kit' ? 'art-kit' : `art-${cat.level}`;
 let cleanup = [];
 // Mascot lines use only verified phrases from the source (page numbers in vocab.json).
@@ -163,7 +168,7 @@ function viewHome() {
       <div class="crew-card dog-card reveal">${mascotHTML('dog')}<div><span class="small-note">Travel buddy · Survival kit</span><h3>Goggles</h3><p>Goggles has the cap and goggles on and is ready for the bus, the market and asking where the toilet is. Goggles runs the survival kit.</p><span class="small-note">Good dog. Very good dog.</span></div></div>
     </div>
 
-    <div class="section-heading"><h2><span>03</span>Survival kit</h2><span class="section-aside">Straight from the 1995 Peace Corps Zambia lessons</span></div>
+    <div class="section-heading"><h2><span>03</span>Survival kit</h2><span class="section-aside">From the 1995 Peace Corps Zambia lessons and Wikitravel</span></div>
     <a class="kit-banner reveal" href="#/kit">
       <div class="art-kit"><div class="lc-top"><span>Bonus track</span><span>${kv.length} phrases</span></div><strong>Survival<br>kit</strong></div>
       <div class="kit-side">
@@ -176,7 +181,7 @@ function viewHome() {
     <div class="coverage">
       <div class="reveal">
         <h3 class="h2">No made-up <em>Nyanja.</em></h3>
-        <p>Every translation here comes from a checked source. Right now that source is the Peace Corps/Zambia 1995 Nyanja lessons, kept with their original spelling. That spelling writes "c" where newer spelling often uses "ch", so <b>cakudya</b> is <b>chakudya</b> today. Phrases without a verified translation stay in the phrasebook, marked as waiting, until a speaker checks them.</p>
+        <p>Every translation here comes from a named source, never a machine. There are two so far. The Peace Corps/Zambia 1995 Nyanja lessons are kept with their original spelling, which writes "c" where newer spelling uses "ch" (<b>cakudya</b> is <b>chakudya</b> today). The Wikitravel Nyanja phrasebook mostly gives Malawi Chichewa forms, so those phrases are marked for a Lusaka speaker to check. Phrases with no translation yet stay in the phrasebook as waiting.</p>
         <a class="text-link" href="#/phrasebook">Browse the phrasebook <span class="arrow">→</span></a>
       </div>
       <div class="cov-rows reveal">
@@ -239,7 +244,7 @@ function viewLevel(n) {
     <div class="level-hero ${isKit ? 'art-kit' : `art-${n}`}">
       <div class="lc-top"><span>${isKit ? 'Survival kit' : `Level ${pad(n)}`}</span><span>${esc(L.name)}</span></div>
       <h1>${esc(L.title)}</h1>
-      <p>${p.learned}/${p.verified} verified phrases learned${isKit ? '. Phrases straight from the 1995 Peace Corps Zambia survival kit.' : ''}</p>
+      <p>${p.learned}/${p.verified} verified phrases learned${isKit ? '. Phrases from the 1995 Peace Corps Zambia survival kit and the Wikitravel phrasebook.' : ''}</p>
       <div class="lc-num" aria-hidden="true">${isKit ? '✳' : n}</div>
     </div>
     ${open ? '' : `<p class="small-note" style="margin-top:22px">This level opens once you've learned ${Math.round(UNLOCK_AT * 100)}% of level ${n - 1}. <button class="text-link" id="jump" style="background:none;border:0;border-bottom:1px solid">Jump ahead anyway →</button></p>`}
@@ -309,7 +314,7 @@ function viewLearn(catId) {
         <div class="face front"><small><span>English</span><span>${pad(items.indexOf(it) + 1)}/${pad(items.length)}</span></small><div class="big ${long ? 'long' : ''}">${esc(it.english)}</div><span class="hint">Tap to flip ↻</span></div>
         <div class="face back"><small><span>Nyanja</span><span>${srcLine(it)}</span></small>
           <div><div class="big letters ${long ? 'long' : ''}">${letters(it.nyanja)}</div>
-          ${it.sourceEnglish ? `<p class="note">Source wording: "${esc(it.sourceEnglish)}"</p>` : ''}${it.note ? `<p class="note">${esc(it.note)}</p>` : ''}</div>
+          ${altLine(it) ? `<p class="note">${altLine(it)}</p>` : ''}${it.sourceEnglish ? `<p class="note">Source wording: "${esc(it.sourceEnglish)}"</p>` : ''}${it.note ? `<p class="note">${esc(it.note)}</p>` : ''}${it.dialect ? `<p class="note">Malawi form · to check for Lusaka</p>` : ''}</div>
           <span class="hint">→ got it · ← again</span></div>
       </div>
       <span class="stamp-yes">Got it</span><span class="stamp-no">Again</span>
@@ -394,12 +399,12 @@ function viewLearn(catId) {
 /* Quiz */
 function pickDistractors(it, dir, cat) {
   const field = dir === 'en' ? 'nyanja' : 'english';
-  const same = c => c.id !== it.id && c.english.toLowerCase() !== it.english.toLowerCase() && c.nyanja.toLowerCase() !== it.nyanja.toLowerCase();
+  const same = c => c.id !== it.id && norm(c.english) !== norm(it.english) && norm(c.nyanja) !== norm(it.nyanja);
   const tiers = [verified.filter(c => c.category === cat.id), verified.filter(c => c.level === it.level), verified];
-  const out = [], seen = new Set([it[field].toLowerCase()]);
+  const out = [], seen = new Set([norm(it[field])]);
   for (const tier of tiers) for (const c of shuffle(tier.filter(same))) {
     if (out.length === 3) return out;
-    const k = c[field].toLowerCase(); if (seen.has(k)) continue; seen.add(k); out.push(c);
+    const k = norm(c[field]); if (seen.has(k)) continue; seen.add(k); out.push(c);
   }
   return out;
 }
@@ -497,7 +502,7 @@ function viewMatch(catId) {
   const own = inCat(catId, 'verified');
   if (!own.length) return viewEmpty(cat, backHref);
   const pool = [], seenE = new Set(), seenN = new Set();
-  const add = it => { const e = it.english.toLowerCase(), n = it.nyanja.toLowerCase(); if (seenE.has(e) || seenN.has(n) || pool.length >= 5) return; seenE.add(e); seenN.add(n); pool.push(it); };
+  const add = it => { const e = norm(it.english), n = norm(it.nyanja); if (seenE.has(e) || seenN.has(n) || pool.length >= 5) return; seenE.add(e); seenN.add(n); pool.push(it); };
   shuffle(own).forEach(add);
   shuffle(verified.filter(v => v.level === cat.level)).forEach(add);
   shuffle(verified).forEach(add);
@@ -567,7 +572,7 @@ function viewPhrasebook() {
     list.innerHTML = groups.length ? groups.map(([c, its]) => `<div class="pb-group"><h2>${esc(c.name)} <small>${c.track === 'kit' ? 'Survival kit' : `Level ${c.level}`} · ${its.length}</small></h2>
       ${its.map(i => `<div class="pb-row"><span>${hl(i.english)}</span>${i.nyanja ? `<span class="ny">${hl(i.nyanja)}</span>` : `<span class="ny none">awaiting verified translation</span>`}
       <span class="chip ${i.status === 'verified' ? 'ok' : i.status}">${i.status === 'verified' ? 'verified' : i.status === 'review' ? 'check' : 'waiting'}</span>
-      ${i.source || i.note ? `<details><summary>Source & notes</summary>${i.source ? `${esc(i.source.doc)}, page ${i.source.page}.` : ''}${i.sourceEnglish ? ` Source wording: "${esc(i.sourceEnglish)}".` : ''} ${esc(i.note || '')}</details>` : ''}</div>`).join('')}</div>`).join('')
+      ${i.source || i.note ? `<details><summary>Source & notes${i.dialect ? ' · Malawi form' : ''}</summary>${srcFull(i)}${i.alsoIn ? ` Also in: ${esc(i.alsoIn)}.` : ''}${i.alt?.length ? ` Alternatives: ${i.alt.map(a => `${esc(a.nyanja)} (${esc(a.doc.split(',')[0])})`).join(', ')}.` : ''}${i.sourceEnglish ? ` Source wording: "${esc(i.sourceEnglish)}".` : ''} ${esc(i.note || '')}${i.dialect ? ` ${esc(i.dialect)}` : ''}</details>` : ''}</div>`).join('')}</div>`).join('')
       : `<p class="pb-empty">Nothing matches "${esc(q)}".</p>`;
   };
   document.getElementById('pb-q').addEventListener('input', e => { q = e.target.value.trim(); draw(); });
