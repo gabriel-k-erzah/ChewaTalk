@@ -38,7 +38,8 @@ const LINES = {
   slowly: () => say("Pang'ono pang'ono", 'Slowly does it'),
 };
 const coachFor = cat => cat.track === 'kit' ? 'dog' : 'eagle';
-const coachEl = () => app.querySelector('.coach .mascot, .stamp-wrap .mascot');
+const coachReact = (...args) => app.querySelectorAll('.coach .mascot, .coach-inline .mascot, .stamp-wrap .mascot').forEach(m => react(m, ...args));
+const inlineCoach = cat => `<div class="coach-inline">${mascotHTML(coachFor(cat), { say: LINES.hello() })}</div>`;
 const stampHTML = (big, small, kind, mood, line) => `<div class="stamp-wrap"><div class="stamp"><div><b>${big}</b><span>${small}</span></div></div>${mascotHTML(kind, { mood, say: line })}</div>`;
 // One delegated handler: any mascot on any page reacts when poked.
 app.addEventListener('click', e => {
@@ -240,7 +241,7 @@ function viewLevel(n) {
       <div class="lc-top"><span>${isKit ? 'Survival kit' : `Level ${pad(n)}`}</span><span>${esc(L.name)}</span></div>
       <h1>${esc(L.title)}</h1>
       <p>${p.learned}/${p.verified} verified phrases learned${isKit ? '. Phrases straight from the 1995 Peace Corps Zambia survival kit.' : ''}</p>
-      <div class="lc-num" aria-hidden="true">${isKit ? '✳' : n}</div>
+      <div class="lc-num" aria-hidden="true">${isKit ? '<span class="star-mark"></span>' : n}</div>
     </div>
     ${open ? '' : `<p class="small-note" style="margin-top:22px">This level opens once you've learned ${Math.round(UNLOCK_AT * 100)}% of level ${n - 1}. <button class="text-link" id="jump" style="background:none;border:0;border-bottom:1px solid">Jump ahead anyway →</button></p>`}
     <div class="cat-list">${cats.map((c, idx) => {
@@ -281,7 +282,7 @@ function viewLearn(catId) {
 
   app.innerHTML = `<section class="wrap">
     <a class="back" href="${backHref}">← ${esc(cat.track === 'kit' ? 'Survival kit' : `Level ${cat.level}`)}</a>
-    <div class="session-head"><div><p class="eyebrow" style="margin:0">Flashcards</p><h1>${esc(cat.name)}</h1></div><div class="pips" id="pips"></div></div>
+    <div class="session-head"><div><p class="eyebrow" style="margin:0">Flashcards</p><h1>${esc(cat.name)}</h1></div><div class="pips" id="pips"></div>${inlineCoach(cat)}</div>
     <div class="deck-zone">
       <div><div class="deck" id="deck"></div>
         <div class="deck-controls">
@@ -334,11 +335,11 @@ function viewLearn(catId) {
     if (ok) {
       status[it.id] = 'done';
       if (store.learn(it.id)) gainXp(5, top);
-      blip('good'); burstFrom(top, 18); react(coachEl(), 'happy', LINES.good());
+      blip('good'); burstFrom(top, 18); coachReact('happy', LINES.good());
     } else {
       status[it.id] = 'again';
       if (!requeued.has(it.id)) { queue.push(it); requeued.add(it.id); }
-      blip('bad'); react(coachEl(), 'think', LINES.again());
+      blip('bad'); coachReact('think', LINES.again());
     }
     top.style.transition = 'transform .5s cubic-bezier(.2,.8,.2,1), opacity .5s';
     top.style.transform = `translate(${ok ? 140 : -140}%, -10%) rotate(${ok ? 22 : -22}deg)`;
@@ -415,7 +416,7 @@ function viewQuiz(catId) {
   const misses = [];
 
   app.innerHTML = `<section class="wrap"><a class="back" href="${backHref}">← ${esc(cat.track === 'kit' ? 'Survival kit' : `Level ${cat.level}`)}</a>
-    <div class="session-head"><div><p class="eyebrow" style="margin:0">Quiz</p><h1>${esc(cat.name)}</h1></div><div class="pips" id="pips"></div></div>
+    <div class="session-head"><div><p class="eyebrow" style="margin:0">Quiz</p><h1>${esc(cat.name)}</h1></div><div class="pips" id="pips"></div>${inlineCoach(cat)}</div>
     <div class="quiz-wrap"><div id="qhost"></div>
       <aside class="score-side"><div class="coach">${mascotHTML(coachFor(cat), { say: LINES.hello() })}</div><div class="stat"><span>Combo</span><b class="combo" id="combo">×0</b></div><div class="stat"><span>Score</span><b id="score">0</b></div><div class="stat"><span>XP this round</span><b id="xpr">0</b></div><p>Keys <kbd>1</kbd>–<kbd>4</kbd> pick an answer. <kbd>Enter</kbd> moves on.</p></aside>
     </div></section>`;
@@ -450,13 +451,13 @@ function viewQuiz(catId) {
       combo++; bestCombo = Math.max(bestCombo, combo); score++;
       const xp = 10 + Math.min(combo - 1, 5) * 2; xpEarned += xp;
       btn.classList.add('correct'); gainXp(xp, btn); burstFrom(btn, 26 + combo * 4); blip('good');
-      react(coachEl(), combo >= 3 ? 'cheer' : 'happy', combo >= 3 ? say(`Bwino bwino! ×${combo}`, 'On a roll!') : LINES.good(), 1400);
+      coachReact(combo >= 3 ? 'cheer' : 'happy', combo >= 3 ? say(`Bwino bwino! ×${combo}`, 'On a roll!') : LINES.good(), 1400);
       store.learn(q.it.id);
       fb.className = 'q-feedback good'; fb.textContent = combo > 1 ? `Correct! Combo ×${combo}` : 'Correct!';
       q.res = 'done';
       setTimeout(next, reduceMotion ? 600 : 950);
     } else {
-      combo = 0; btn.classList.add('wrong'); blip('bad'); react(coachEl(), 'sad', LINES.sorry(), 2200);
+      combo = 0; btn.classList.add('wrong'); blip('bad'); coachReact('sad', LINES.sorry(), 2200);
       host.querySelector(`.opt[data-id="${q.it.id}"]`).classList.add('answer');
       fb.className = 'q-feedback bad'; fb.textContent = `Not quite. ${q.it.english} = ${q.it.nyanja}`;
       misses.push(q.it); q.res = 'again';
@@ -524,10 +525,10 @@ function viewMatch(catId) {
     if (a.dataset.id === tile.dataset.id) {
       [a, tile].forEach(t => { t.classList.add('yes'); t.disabled = true; });
       found++; document.getElementById('m-found').textContent = found;
-      burstFrom(tile, 24); blip('good'); gainXp(4, tile); store.learn(tile.dataset.id); react(coachEl(), 'happy', LINES.good(), 1200);
+      burstFrom(tile, 24); blip('good'); gainXp(4, tile); store.learn(tile.dataset.id); coachReact('happy', LINES.good(), 1200);
       if (found === pool.length) setTimeout(done, 700);
     } else {
-      misses++; document.getElementById('m-miss').textContent = misses; blip('bad'); react(coachEl(), 'sad', LINES.sorry(), 1200);
+      misses++; document.getElementById('m-miss').textContent = misses; blip('bad'); coachReact('sad', LINES.sorry(), 1200);
       busy = true; [a, tile].forEach(t => t.classList.add('no'));
       setTimeout(() => { [a, tile].forEach(t => t.classList.remove('no')); busy = false; }, 460);
     }
@@ -609,10 +610,17 @@ function route() {
     default: viewNotFound();
   }
   reveal(app);
+  watchAnimations();
 }
+const pauser = 'IntersectionObserver' in window ? new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('paused', !e.isIntersecting)), { rootMargin: '80px' }) : null;
+function watchAnimations() {
+  if (!pauser) return;
+  app.querySelectorAll('.stage, .marquee, .level-card, .kit-banner, .crew-card, .level-hero, .mascot').forEach(el => pauser.observe(el));
+}
+const touch = matchMedia('(hover: none)').matches;
 function render() {
   const go = () => { route(); scrollTo({ top: 0, behavior: 'instant' }); };
-  if (!document.startViewTransition || reduceMotion) return go();
+  if (!document.startViewTransition || reduceMotion || touch) return go();
   const vt = document.startViewTransition(go);
   // Rapid navigation skips transitions; that's expected, not an error.
   [vt.ready, vt.finished, vt.updateCallbackDone].forEach(pr => pr.catch(() => {}));

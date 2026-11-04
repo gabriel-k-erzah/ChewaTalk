@@ -65,7 +65,8 @@ export function initPets({ on = true } = {}) {
 }
 export function setPets(on) { enabled = on && !reduceMotion; if (enabled) schedule(1500); else clearTimeout(timer); }
 
-function schedule(ms = 30000 + Math.random() * 40000) {
+const small = () => innerWidth < 760;
+function schedule(ms = (small() ? 45000 : 30000) + Math.random() * 40000) {
   clearTimeout(timer);
   timer = setTimeout(() => {
     if (enabled && !document.hidden && !running) runPet(Math.random() < .55 ? 'dog' : 'eagle');
