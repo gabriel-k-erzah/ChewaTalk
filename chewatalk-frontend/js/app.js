@@ -120,7 +120,6 @@ function levelCardHTML(n) {
 
 function viewHome() {
   const sample = shuffle(verified.filter(i => i.nyanja.length < 22));
-  const ticker = sample.slice(0, 18).map(i => `<span>${esc(i.nyanja)} <em>${esc(i.english)}</em></span>`).join('');
   const total = ITEMS.filter(i => catById[i.category].track === 'curriculum');
   const tv = total.filter(i => i.status === 'verified').length, tr = total.filter(i => i.status === 'review').length;
   const kv = kitItems('verified');
@@ -156,7 +155,6 @@ function viewHome() {
       </button>
     </div>
   </section>
-  <div class="marquee" aria-hidden="true"><div class="marquee-track">${ticker}${ticker}</div></div>
 
   <section class="wrap">
     <div class="section-heading"><h2><span>01</span>The route</h2><span class="section-aside">Five levels · ${CATS.filter(c => c.track === 'curriculum').length} categories</span></div>

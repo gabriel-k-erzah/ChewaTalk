@@ -511,3 +511,12 @@ mark{background:var(--acid);color:inherit;padding:0 1px}
 .mascot-eagle .wing-far .wing-flap{transform-origin:100% 100%}
 .mascot-eagle .head{transform-origin:80% 90%}
 .mascot-eagle[data-mood=sad] .wing-flap{transform:rotate(18deg)}
+
+/* Flip cards: hide the face that has turned away, at the midpoint of the flip.
+   backface-visibility alone isn't reliable on phones (notably inside <button>), which let
+   the previous English show through behind the Nyanja. */
+.wc-face,.face{-webkit-backface-visibility:hidden}
+.wc-front,.face.front{visibility:visible;transition:visibility 0s .22s}
+.wc-back,.face.back{visibility:hidden;transition:visibility 0s .22s}
+.word-card.flipped .wc-front,.card.flipped .face.front{visibility:hidden}
+.word-card.flipped .wc-back,.card.flipped .face.back{visibility:visible}
