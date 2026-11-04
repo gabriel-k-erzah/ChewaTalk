@@ -8,7 +8,7 @@ const E = `stroke="${BR}" stroke-width="3.2" stroke-linejoin="round" stroke-line
 const D = `stroke="${INK}" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"`;
 
 // Side view, facing right. Legs are separate groups so they can gallop.
-const leg = (x, y, fill, cls) => `<g transform="translate(${x} ${y})"><g class="leg ${cls}"><path ${D} fill="${fill}" d="M-6 0 L6 0 L5 26 Q6 33 0 33 L-9 33 Q-12 28 -5 27Z"/></g></g>`;
+const leg = (x, y, fill, cls) => `<g transform="translate(${x} ${y})"><g class="leg ${cls}"><path ${D} fill="${fill}" d="M-6 0 L6 0 L6 26 Q14 26 13 33 L-3 33 Q-7 33 -6 27Z"/></g></g>`;
 
 export function dogRunnerSVG() {
   let fleece = '';
@@ -44,7 +44,7 @@ export function eagleFlyerSVG() {
     <g class="fish"><path ${E} fill="#3aa0d8" d="M96 100 C104 92 128 92 136 100 C128 108 104 108 96 100Z"/><path ${E} fill="#3aa0d8" d="M96 100 L84 92 L86 100 L84 108Z"/><circle cx="128" cy="99" r="2.2" fill="${BR}"/></g>
     <path ${E} fill="#ffc23a" d="M104 86 L108 98 M118 86 L120 98"/><path ${E} fill="#ffc23a" d="M102 96 C104 92 112 92 112 96 L112 102 C108 104 104 104 102 102Z"/><path ${E} fill="#ffc23a" d="M116 96 C118 92 126 92 126 96 L126 102 C122 104 118 104 116 102Z"/>
     <path ${E} fill="#fbfaf6" d="M140 62 C140 46 152 38 164 40 C176 42 182 52 180 62 C178 70 172 74 166 76 L170 84 L160 80 L156 88 L150 78 L142 82 L144 72 C141 69 140 66 140 62Z"/>
-    <path ${E} fill="#ffc23a" d="M174 50 C184 46 196 52 196 64 C192 60 186 60 180 62 C178 58 176 54 174 50Z"/><path fill="#f0892a" d="M196 64 C194 58 190 56 186 56 C190 58 193 60 196 64Z"/>
+    <path ${E} fill="#ffc23a" d="M172 49 C182 43 196 45 201 53 C203 57 200 62 195 62 C195 58 191 56 185 57 L176 60 C174 57 172 53 172 49Z"/><path fill="#f0892a" d="M201 53 C203 57 200 62 195 62 C195 59 193 57 190 56 C195 55 199 54 201 53Z"/>
     <circle cx="164" cy="52" r="6" fill="#fff" stroke="${BR}" stroke-width="2.5"/><circle cx="166" cy="52.5" r="3.6" fill="#6b5fa8"/><circle cx="166" cy="52.5" r="1.8" fill="${BR}"/>
     <path stroke="${BR}" stroke-width="3.5" stroke-linecap="round" d="M156 44 L170 46"/>
     ${wing('near', '#c9452c')}

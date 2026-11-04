@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/wrangler@4/config-schema.json",
+  "name": "chewatalk",
+  "compatibility_date": "2026-10-01",
+  // Static site only: Cloudflare serves this folder from the edge, no Worker script.
+  // Routing is hash-based (#/level/1), so every real path is a file; unknown paths fall back to the app.
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "single-page-application"
+  },
+  "routes": [
+    { "pattern": "chewatalk.com", "custom_domain": true },
+    { "pattern": "www.chewatalk.com", "custom_domain": true }
+  ],
+  "workers_dev": false
+}

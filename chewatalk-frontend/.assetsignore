@@ -1,0 +1,9 @@
+# Source and tooling that should not be served
+tools
+README.md
+wrangler.jsonc
+.assetsignore
+.wrangler
+node_modules
+.DS_Store
+.gitignore

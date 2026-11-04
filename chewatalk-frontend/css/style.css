@@ -505,3 +505,9 @@ mark{background:var(--acid);color:inherit;padding:0 1px}
 .pet-say small{display:block;font:10px var(--mono);color:var(--muted);margin-top:2px}
 .hud-pets[aria-pressed=false]{opacity:.45}
 @media(max-width:760px){.pet{width:130px}.pet-eagle{width:140px}}
+
+/* Side-view eagle: wings hinge at the shoulder, head tilts from the neck */
+.mascot-eagle .wing-near .wing-flap{transform-origin:0% 50%}
+.mascot-eagle .wing-far .wing-flap{transform-origin:100% 100%}
+.mascot-eagle .head{transform-origin:80% 90%}
+.mascot-eagle[data-mood=sad] .wing-flap{transform:rotate(18deg)}

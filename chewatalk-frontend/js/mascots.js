@@ -10,46 +10,58 @@ const BR = '#3a2320';
 const E = `stroke="${BR}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"`;
 const RUST = '#c9452c', RUST_D = '#a8321f', GLOW = '#f0892a', WHITE = '#fbfaf6', WSH = '#cfd8ea', BEAK = '#ffc23a';
 
-// Raised wing (reference pose). Drawn for the left side, mirrored for the right.
-const wing = `
-  <g class="wing-flap">
-    <path ${E} fill="${RUST}" d="M86 108 C76 82 60 54 36 26 C30 20 22 24 24 32 L32 50 L14 46 L26 64 L8 66 L26 80 L12 88 L36 96 L28 104 C50 108 70 112 86 108Z"/>
-    <path fill="${RUST_D}" d="M80 104 C62 104 46 100 30 96 L36 96 L28 104 C50 108 70 112 86 108Z" opacity=".55"/>
-    <path fill="${GLOW}" opacity=".85" d="M80 98 C70 76 56 54 38 32 C52 42 66 60 76 78 C80 86 82 92 80 98Z"/>
-    <path fill="none" stroke="${GLOW}" stroke-width="2.6" stroke-linecap="round" d="M52 60 q4 6 8 0 M46 76 q4 6 8 0 q4 6 8 0"/>
-  </g>`;
+// Three-quarter side view: head turned up-left, wings raised behind, white tail fanned out,
+// orange legs gripping a fish. Soft rounded shapes with a warm brown outline.
+const RED2 = '#b5302a', BELLY = '#d9583a';
 
 export function eagleSVG({ logo = false } = {}) {
-  const vb = logo ? '67 15 86 86' : '0 0 220 214';
+  const vb = logo ? '20 28 88 88' : '0 0 232 215';
   return `<svg class="eagle" viewBox="${vb}" role="img" aria-label="Nkwazi the eagle">
   <g class="m-body">
-    ${logo ? '' : `<g class="wing wing-l">${wing}</g><g class="wing wing-r" transform="translate(220 0) scale(-1 1)">${wing}</g>
-    <path ${E} fill="${WHITE}" d="M98 158 L84 200 L100 190 L110 206 L120 190 L136 200 L122 158Z"/>
-    <path fill="none" stroke="${WSH}" stroke-width="3" stroke-linecap="round" d="M100 176 L94 192 M110 178 L110 196 M120 176 L126 192"/>
-    <path ${E} fill="${RUST}" d="M110 86 C138 86 150 110 148 136 C146 160 130 174 110 174 C90 174 74 160 72 136 C70 110 82 86 110 86Z"/>
-    <path fill="${GLOW}" opacity=".55" d="M84 120 C86 104 96 94 108 92 C96 102 90 116 90 134 C90 148 96 160 104 168 C88 162 82 140 84 120Z"/>
-    <path fill="none" stroke="${RUST_D}" stroke-width="2.6" stroke-linecap="round" d="M98 130 q4 6 8 0 q4 6 8 0 M104 146 q4 6 8 0 q4 6 8 0 M96 156 q4 5 8 0"/>
+    ${logo ? '' : `
+    <g class="wing wing-far"><g class="wing-flap">
+      <path ${E} fill="${RED2}" d="M104 78 C98 60 86 42 68 32 C62 29 58 33 61 38 C66 46 70 55 72 63 C77 72 86 78 96 82Z"/>
+      <path fill="${GLOW}" opacity=".85" d="M66 33 C80 40 92 54 98 68 C90 56 80 46 64 38 C62 36 63 34 66 33Z"/>
+      <path fill="none" stroke="${GLOW}" stroke-width="2.4" stroke-linecap="round" d="M80 56 q3 4 6 0"/>
+    </g></g>
+    <g class="wing wing-near"><g class="wing-flap">
+      <path ${E} fill="${RUST}" d="M100 80 C97 60 99 40 104 28 C106 22 113 19 121 21 C150 29 181 58 207 85 C214 92 225 95 222 102 C220 106 213 105 207 104 C213 110 215 116 209 120 C203 123 197 119 193 117 C197 125 195 133 189 133 C181 133 171 121 161 112 C151 105 139 104 128 107 C116 104 106 94 100 80Z"/>
+      <path fill="${RED2}" d="M128 107 C139 104 151 105 161 112 C171 121 181 133 189 133 C178 124 168 108 156 98 C146 90 134 92 124 96Z" opacity=".9"/>
+      <path fill="${GLOW}" opacity=".9" d="M105 30 C110 23 120 22 128 26 C152 38 178 62 203 86 C180 70 152 46 127 35 C119 31 111 31 105 34Z"/>
+      <path fill="none" stroke="${BR}" stroke-width="2.6" stroke-linecap="round" d="M117 32 C116 54 124 74 142 92 M176 84 L200 102 M166 94 L192 116 M156 102 L180 128"/>
+      <path fill="none" stroke="${GLOW}" stroke-width="2.6" stroke-linecap="round" d="M132 52 q3 5 6 0 M146 70 q3 5 6 0 q3 5 6 0 M126 76 q3 4 6 0"/>
+    </g></g>
+    <path ${E} fill="${WHITE}" d="M124 126 C145 134 165 141 182 149 C187 151 186 157 181 158 C186 161 185 168 178 168 C160 166 140 158 124 148Z"/>
+    <path fill="none" stroke="${WSH}" stroke-width="3" stroke-linecap="round" d="M132 140 C148 148 164 154 178 159 M134 132 C150 138 164 144 176 150"/>
+    <path ${E} fill="${RUST}" d="M66 98 C60 118 68 140 86 150 C99 157 115 155 125 146 C133 138 135 124 131 110 C127 96 116 86 104 82 C90 80 72 86 66 98Z"/>
+    <path fill="${BELLY}" d="M72 104 C68 120 74 138 88 146 C80 134 78 118 82 104Z" opacity=".9"/>
+    <path fill="none" stroke="${RED2}" stroke-width="2.6" stroke-linecap="round" d="M84 134 l3 5 l3 -5 l3 5 M100 142 q3 5 6 0 M112 120 q3 5 6 0"/>
     <g class="legs">
-      <path ${E} fill="${GLOW}" d="M94 164 L104 164 L104 184 L94 184Z"/><path ${E} fill="${GLOW}" d="M116 164 L126 164 L126 184 L116 184Z"/>
-      <g class="fish"><path ${E} fill="#3aa0d8" d="M78 192 C88 182 120 182 132 192 C120 202 88 202 78 192Z"/><path ${E} fill="#3aa0d8" d="M132 192 L146 182 L144 192 L146 202Z"/><circle cx="88" cy="190" r="2.6" fill="${BR}"/><path fill="none" stroke="#9fd8f2" stroke-width="2.4" stroke-linecap="round" d="M96 188 Q108 184 120 188"/></g>
-      <path ${E} fill="${BEAK}" d="M90 182 C92 178 106 178 108 182 L108 192 C104 196 94 196 90 192Z"/><path ${E} fill="${BEAK}" d="M112 182 C114 178 128 178 130 182 L130 192 C126 196 116 196 112 192Z"/>
-      <path fill="none" ${E} d="M94 192 l-2 5 M100 194 l0 5 M106 192 l2 5 M116 192 l-2 5 M122 194 l0 5 M128 192 l2 5"/>
+      <path ${E} fill="${GLOW}" d="M93 146 L104 146 L106 168 L95 170Z"/><path ${E} fill="${GLOW}" d="M105 144 L116 144 L118 166 L108 168Z"/><path ${E} fill="${RUST}" d="M89 132 C86 142 90 151 97 150 C100 155 107 155 110 151 C115 153 121 148 120 139 L117 130 Z"/><path fill="none" stroke="${RED2}" stroke-width="2.2" stroke-linecap="round" d="M94 146 l2 4 M104 147 l1 4 M113 146 l1 4"/>
+      <path fill="none" stroke="#c96a12" stroke-width="2" stroke-linecap="round" d="M96 156 h6 M97 162 h6 M108 154 h6 M109 160 h6"/>
+      <g class="fish">
+        <path ${E} fill="#3aa0d8" d="M80 166 L70 158 L74 170 L66 176 L82 172Z"/>
+        <path ${E} fill="#3aa0d8" d="M80 168 C92 166 110 172 120 182 C117 190 107 191 100 187 C91 182 84 176 80 168Z"/>
+        <circle cx="112" cy="183" r="3" fill="#fff" stroke="${BR}" stroke-width="1.6"/><circle cx="112.6" cy="183.4" r="1.4" fill="${BR}"/>
+        <path fill="none" stroke="#9fd8f2" stroke-width="2.2" stroke-linecap="round" d="M88 172 C96 174 104 178 110 182"/>
+      </g>
+      <path ${E} fill="${BEAK}" d="M92 166 C92 162 106 162 107 167 L107 176 C103 180 94 180 92 176Z"/>
+      <path ${E} fill="${BEAK}" d="M105 166 C105 162 119 162 120 167 L120 176 C116 180 107 180 105 176Z"/>
+      <path fill="none" ${E} d="M95 176 l-1 5 M100 178 l0 5 M108 176 l-1 5 M113 178 l0 5 M118 176 l1 4"/>
     </g>`}
     <g class="head">
-      <path ${E} fill="${WHITE}" d="M110 22 C134 22 148 40 146 62 C146 72 142 80 138 86 L146 98 L132 95 L128 108 L118 97 L110 110 L102 97 L92 108 L88 95 L74 98 L82 86 C78 80 74 72 74 62 C72 40 86 22 110 22Z"/>
-      <path fill="none" stroke="${WSH}" stroke-width="3" stroke-linecap="round" d="M88 88 q4 5 8 0 M114 90 q4 5 8 0 M100 92 q5 5 10 0 M80 72 q-2 6 2 10 M140 72 q2 6 -2 10"/>
-      <ellipse cx="86" cy="74" rx="6" ry="4" fill="#ff9aa8" opacity=".75"/><ellipse cx="134" cy="74" rx="6" ry="4" fill="#ff9aa8" opacity=".75"/>
+      <path ${E} fill="${WHITE}" d="M50 66 C48 52 56 44 68 45 C77 46 83 53 85 61 C90 71 98 78 108 84 C101 87 97 87 93 85 C97 92 96 98 92 102 C87 100 84 96 82 92 C80 100 76 104 70 106 C68 99 66 93 64 89 C60 95 56 98 51 98 C54 88 52 76 50 66Z"/>
+      <path fill="none" stroke="${WSH}" stroke-width="2.8" stroke-linecap="round" d="M70 78 q3 4 6 0 M84 84 q3 4 6 0 M62 86 q2 4 5 0 M78 92 l2 6"/>
+      <ellipse class="blush" cx="76" cy="66" rx="5" ry="3.2" fill="#ff9aa8" opacity=".7"/>
       <g class="eyes-open">
-        <circle cx="96" cy="56" r="10" fill="#fff" stroke="${BR}" stroke-width="3"/><circle cx="124" cy="56" r="10" fill="#fff" stroke="${BR}" stroke-width="3"/>
-        <g class="pupil"><circle cx="97" cy="57" r="6.5" fill="#6b5fa8"/><circle cx="97" cy="57" r="3.4" fill="${BR}"/><circle cx="99" cy="54.5" r="1.8" fill="#fff"/></g>
-        <g class="pupil"><circle cx="123" cy="57" r="6.5" fill="#6b5fa8"/><circle cx="123" cy="57" r="3.4" fill="${BR}"/><circle cx="125" cy="54.5" r="1.8" fill="#fff"/></g>
+        <circle cx="64" cy="57" r="7.5" fill="#fff" stroke="${BR}" stroke-width="2.8"/>
+        <g class="pupil"><circle cx="63" cy="57" r="5" fill="#6b5fa8"/><circle cx="63" cy="57" r="2.6" fill="${BR}"/><circle cx="64.6" cy="55" r="1.5" fill="#fff"/></g>
       </g>
-      <g class="eyes-happy" fill="none" stroke="${BR}" stroke-width="4" stroke-linecap="round"><path d="M87 59 Q96 48 105 59"/><path d="M115 59 Q124 48 133 59"/></g>
-      <path class="brow brow-l" fill="none" stroke="${BR}" stroke-width="4.5" stroke-linecap="round" d="M84 42 L105 46"/>
-      <path class="brow brow-r" fill="none" stroke="${BR}" stroke-width="4.5" stroke-linecap="round" d="M136 42 L115 46"/>
-      <path class="beak" ${E} fill="${BEAK}" d="M94 70 C98 60 124 59 128 69 C132 79 128 92 118 100 C117 92 113 87 106 86 C99 85 94 79 94 70Z"/>
-      <path class="beak-tip" fill="${GLOW}" d="M118 100 C125 93 128 86 128 78 C122 83 116 86 108 86 C113 89 117 93 118 100Z"/>
-      <path class="smile" fill="none" stroke="${BR}" stroke-width="2.5" stroke-linecap="round" d="M99 74 Q110 80 124 72"/>
+      <g class="eyes-happy" fill="none" stroke="${BR}" stroke-width="3.4" stroke-linecap="round"><path d="M57 59 Q64 50 71 59"/></g>
+      <path class="brow brow-l" fill="none" stroke="${BR}" stroke-width="3.6" stroke-linecap="round" d="M55 43.5 L70 45.5"/>
+      <path class="beak" ${E} fill="${BEAK}" d="M57 49 C49 43 37 42 30 46 C27 48 28 52 32 52 C39 52 44 55 46 59 C48 63 52 65 57 64 C60 60 60 53 57 49Z"/>
+      <path class="beak-tip" fill="${GLOW}" d="M32 52 C39 52 44 55 46 59 C48 63 52 65 57 64 C52 67 45 66 41 62 C38 58 36 54 32 52Z"/>
+      <path class="smile" fill="none" stroke="${BR}" stroke-width="2.2" stroke-linecap="round" d="M44 58 Q50 62 56 61"/>
     </g>
   </g></svg>`;
 }

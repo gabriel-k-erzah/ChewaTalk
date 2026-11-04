@@ -50,3 +50,13 @@ Both react to answers: they hop on a correct one, droop on a wrong one and cheer
 ### Pets
 
 About 6–10 seconds after the page loads, and then every 30–70 seconds, one pet crosses the screen: Goggles gallops along the bottom with a scarf flying, or Nkwazi flies over with the fish. Both run out together when you finish a deck, a quiz at 70% or more, or a match game. Click a pet as it passes to make it hop and say something. The paw button in the header turns pets on or off (the setting is saved), and pets never run when reduced motion is on.
+
+## Hosting
+
+The live site is at https://chewatalk.com (and www). It's a Cloudflare Worker named `chewatalk` that only serves static assets, on the same account as gabrielerzah.com. To redeploy after changes, run this from this folder:
+
+```sh
+npx wrangler@4 deploy
+```
+
+`.assetsignore` stops `tools/`, the README and the config files from being uploaded. `_headers` sets the security headers. Unknown paths fall back to the app, which routes with `#/…`.
