@@ -91,8 +91,8 @@ nav a[aria-current]{color:var(--red)}
 @keyframes drift{to{transform:translateX(60px)}}
 .sun{position:absolute;left:50%;top:41%;width:240px;height:240px;margin-left:-120px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#fff7cf,#ffcf6b 45%,#ff7a4c 100%);box-shadow:0 0 80px 20px #ffb34766;z-index:0;transform:translate(var(--px,0),var(--py,0))}
 .ground{position:absolute;left:0;right:0;bottom:0;height:28%;z-index:2;background:repeating-linear-gradient(100deg,transparent 0 70px,#f4d27a 70px 73px) ,linear-gradient(#8d8d97,#6b6b73)}
-.word-card{position:absolute;left:50%;top:50%;width:min(360px,74%);aspect-ratio:1.45;margin:0;z-index:3;transform-style:preserve-3d;transform:translate(-50%,-55%) rotateX(var(--rx,0deg)) rotateY(calc(var(--ry,0deg) + var(--flip,0deg)));transition:transform .9s var(--spring);cursor:pointer;border:0;padding:0;background:none}
-.word-card.flipped{--flip:180deg}
+.word-card{position:absolute;left:50%;top:50%;width:min(360px,74%);aspect-ratio:1.45;margin:0;z-index:3;transform-style:preserve-3d;transform:translate(-50%,-55%) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out;cursor:pointer;border:0;padding:0;background:none}
+
 .wc-face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:18px 20px;backface-visibility:hidden;border:2px solid var(--ink);text-align:left}
 .wc-front{background:var(--paper);box-shadow:10px 12px 0 #1c1c19}
 .wc-back{background:var(--red);color:var(--paper);transform:rotateY(180deg);box-shadow:-10px 12px 0 #1c1c19}
@@ -209,7 +209,7 @@ nav a[aria-current]{color:var(--red)}
 .card.behind{pointer-events:none}
 .card.behind-1{transform:translate(18px,-16px) rotate(2.2deg) scale(.98);filter:brightness(.92)}
 .card.behind-2{transform:translate(34px,-32px) rotate(4.4deg) scale(.96);filter:brightness(.84)}
-.card-flip{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s var(--spring)}
+.card-flip{position:absolute;inset:0;transform-style:preserve-3d}
 .card.flipped .card-flip{transform:rotateY(180deg)}
 .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--ink);display:flex;flex-direction:column;justify-content:space-between;padding:26px 28px;overflow:hidden}
 .face.front{background:var(--paper)}
@@ -224,7 +224,7 @@ nav a[aria-current]{color:var(--red)}
 .face.back .hint{color:#f2eddfcc}
 .face .note{font:12px/1.6 var(--mono);max-width:520px;color:#f2eddfde}
 .letters span{display:inline-block;opacity:0;transform:translateY(40%) rotate(8deg)}
-.card.flipped .letters span{animation:letter .5s var(--spring) forwards;animation-delay:calc(.25s + var(--i)*28ms)}
+.card.flipped .letters span{animation:letter .45s var(--ease) forwards;animation-delay:calc(var(--flip-half) + var(--i)*22ms)}
 @keyframes letter{to{opacity:1;transform:none}}
 .stamp-yes,.stamp-no{position:absolute;top:28px;z-index:5;font:800 34px/1 var(--display);padding:4px 12px;border:3px solid;text-transform:uppercase;opacity:0;pointer-events:none}
 .stamp-yes{right:26px;color:#2c8a16;transform:rotate(10deg)}.stamp-no{left:26px;color:#c0560b;transform:rotate(-10deg)}
@@ -515,8 +515,27 @@ mark{background:var(--acid);color:inherit;padding:0 1px}
 /* Flip cards: hide the face that has turned away, at the midpoint of the flip.
    backface-visibility alone isn't reliable on phones (notably inside <button>), which let
    the previous English show through behind the Nyanja. */
-.wc-face,.face{-webkit-backface-visibility:hidden}
-.wc-front,.face.front{visibility:visible;transition:visibility 0s .22s}
-.wc-back,.face.back{visibility:hidden;transition:visibility 0s .22s}
+
+
+/* Static fallback content (shown only until the app loads, or without JavaScript) */
+.seo-fallback{padding:50px 0 20px;max-width:760px}
+.seo-fallback h1{font:800 clamp(48px,7vw,88px)/.92 var(--display);letter-spacing:-.03em;margin:0 0 20px}
+.seo-fallback h2{font:500 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;margin:30px 0 10px;border-top:1px solid var(--ink);padding-top:12px}
+.seo-fallback p,.seo-fallback li{font-size:16px;line-height:1.7}
+
+/* ── Smooth card flip ─────────────────────────────────────────────
+   One symmetric ease (in-out cubic): the card is exactly edge-on at half the duration,
+   which is exactly when each face is switched, so nothing pops. A small lift and
+   shadow swell while it turns makes it feel physical. Tilt lives on a separate layer. */
+:root{--flip-dur:.6s;--flip-half:.3s;--flip-ease:cubic-bezier(.65,0,.35,1)}
+.wc-flip{position:absolute;inset:0;display:block;transform-style:preserve-3d;transition:transform var(--flip-dur) var(--flip-ease);will-change:transform}
+.word-card.flipped .wc-flip,.card.flipped .card-flip{transform:rotateY(180deg)}
+.card-flip{transition:transform var(--flip-dur) var(--flip-ease);will-change:transform}
+.wc-flip.lift,.card-flip.lift{animation:flip-lift var(--flip-dur) var(--flip-ease)}
+@keyframes flip-lift{50%{scale:1.05;translate:0 -6px}}
+.wc-face,.face{-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.wc-front,.face.front{visibility:visible;transition:visibility 0s linear var(--flip-half)}
+.wc-back,.face.back{visibility:hidden;transition:visibility 0s linear var(--flip-half)}
 .word-card.flipped .wc-front,.card.flipped .face.front{visibility:hidden}
 .word-card.flipped .wc-back,.card.flipped .face.back{visibility:visible}
+@media(prefers-reduced-motion:reduce){.wc-flip,.card-flip{transition:none}.wc-flip.lift,.card-flip.lift{animation:none}.wc-front,.wc-back,.face.front,.face.back{transition:none}}

@@ -31,6 +31,8 @@ const altLine = it => it.alt?.length ? `Also: ${it.alt.map(a => esc(a.nyanja)).j
 const srcFull = it => !it.source ? '' : `${esc(it.source.doc)}${it.source.page ? `, page ${it.source.page}` : ''}.`;
 const artFor = cat => cat.track === 'kit' ? 'art-kit' : `art-${cat.level}`;
 let cleanup = [];
+// Replays the small lift that accompanies every card flip.
+const lift = el => { if (!el) return; el.classList.remove('lift'); void el.offsetWidth; el.classList.add('lift'); };
 // Mascot lines use only verified phrases from the source (page numbers in vocab.json).
 const say = (ny, en) => `${esc(ny)}<small>${esc(en)}</small>`;
 const LINES = {
@@ -150,8 +152,10 @@ function viewHome() {
       ${mascotHTML('dog', { cls: 'hero-dog flip-say' })}
       ${floats.map((f, i) => `<span class="floaty f${i + 1}" data-depth="${(i + 1) * 6}">${esc(f.nyanja)}</span>`).join('')}
       <button class="word-card" id="hero-card" aria-label="Flip card to see the Nyanja translation">
+        <span class="wc-flip">
         <span class="wc-face wc-front"><small><span>English</span><span>Tap ↻</span></small><strong id="hc-en">${esc(first.english)}</strong></span>
         <span class="wc-face wc-back"><small><span>Nyanja</span><span id="hc-src">${srcLine(first)}</span></small><strong id="hc-ny">${esc(first.nyanja)}</strong></span>
+        </span>
       </button>
     </div>
   </section>
@@ -211,9 +215,9 @@ function heroStage(sample) {
     if (card.classList.contains('flipped')) {
       i = (i + 1) % sample.length;
       en.textContent = sample[i].english;
-      card.classList.remove('flipped');
-      setTimeout(() => { ny.textContent = sample[i].nyanja; src.textContent = srcLine(sample[i]); }, 450);
-    } else card.classList.add('flipped');
+      card.classList.remove('flipped'); lift(card.firstElementChild);
+      setTimeout(() => { ny.textContent = sample[i].nyanja; src.textContent = srcLine(sample[i]); }, 650);
+    } else { card.classList.add('flipped'); lift(card.firstElementChild); }
   };
   let timer = reduceMotion ? 0 : setInterval(step, 2800);
   card.addEventListener('click', () => { clearInterval(timer); step(); blip('flip'); timer = reduceMotion ? 0 : setInterval(step, 4200); });
@@ -328,7 +332,7 @@ function viewLearn(catId) {
     bindDrag(top);
   }
 
-  function flip() { const top = deck.lastElementChild; if (!top) return; top.classList.toggle('flipped'); blip('flip'); }
+  function flip() { const top = deck.lastElementChild; if (!top) return; top.classList.toggle('flipped'); lift(top.querySelector('.card-flip')); blip('flip'); }
 
   function decide(ok) {
     const top = deck.lastElementChild; if (!top || top.dataset.leaving) return;
