@@ -1,7 +1,7 @@
 # Core Web Framework
 fastapi==0.115.11
 uvicorn[standard]==0.34.0
-pydantic==2.10.6
+pydantic==2.11.0
 pydantic-settings==2.7.1
 
 # Database Layer (Python 3.14 + Postgres 18 Native)
