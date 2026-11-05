@@ -295,7 +295,7 @@ function viewLevel(n) {
       <div class="lc-top"><span>${isKit ? 'Survival kit' : `Level ${pad(n)}`}</span><span>${esc(L.name)}</span></div>
       <h1>${esc(L.title)}</h1>
       <p>${p.learned}/${p.verified} verified phrases learned${isKit ? '. Phrases from the 1995 Peace Corps Zambia survival kit and the Wikitravel phrasebook.' : ''}</p>
-      <div class="lc-num" aria-hidden="true">${isKit ? '<span class="star-mark"></span>' : n}</div>
+      ${isKit ? mascotHTML('dog', { cls: 'kit-hero-dog flip-say' }) : `<div class="lc-num" aria-hidden="true">${n}</div>`}
     </div>
     ${open ? '' : `<p class="small-note" style="margin-top:22px">This level opens once you've learned ${Math.round(UNLOCK_AT * 100)}% of level ${n - 1}. <button class="text-link" id="jump" style="background:none;border:0;border-bottom:1px solid">Jump ahead anyway →</button></p>`}
     <div class="cat-list">${cats.map((c, idx) => {
@@ -321,6 +321,7 @@ function viewLevel(n) {
     <p class="small-note" style="margin-top:22px">Categories with no verified phrases yet show "waiting". Add checked translations to <code>data/vocab.json</code> through <code>tools/build_vocab.py</code> and they show up here automatically.</p>
   </section>`;
   reveal(app);
+  if (isKit) setTimeout(() => react(app.querySelector('.kit-hero-dog'), 'happy', LINES.welcome(), 2400), 700);
   document.getElementById('jump')?.addEventListener('click', () => { store.unlock(n); blip('win'); burst(innerWidth / 2, innerHeight / 3, 60); render(); });
 }
 

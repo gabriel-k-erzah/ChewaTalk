@@ -590,6 +590,14 @@ mark{background:var(--acid);color:inherit;padding:0 1px}
 }
 @media(max-width:760px) and (prefers-reduced-motion:reduce){.menu-panel,.menu-panel.open{transition:none}.menu-links a{opacity:1;transform:none}}
 
-/* Drawn asterisk (no emoji glyphs anywhere on the site) */
-:root{--star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg stroke='black' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4'/%3E%3C/g%3E%3C/svg%3E")}
-.star-mark{display:inline-block;width:.62em;height:.62em;background:currentColor;-webkit-mask:var(--star) center/contain no-repeat;mask:var(--star) center/contain no-repeat;vertical-align:.08em}
+
+/* Goggles in the survival kit banner */
+.level-hero .kit-hero-dog{position:absolute;right:28px;bottom:-6px;width:210px;z-index:3}
+.level-hero .kit-hero-dog .say{font-size:22px}
+@media(max-width:760px){
+  .level-hero.art-kit{min-height:270px}
+  .level-hero.art-kit h1{max-width:58%}
+  .level-hero.art-kit p{max-width:58%}
+  .level-hero .kit-hero-dog{width:132px;right:10px}
+  .level-hero .kit-hero-dog .say{font-size:16px;padding:5px 9px;left:auto;right:0;bottom:96%;border-radius:14px 14px 2px 14px;transform-origin:100% 100%}.level-hero .kit-hero-dog .say small{display:none}
+}
