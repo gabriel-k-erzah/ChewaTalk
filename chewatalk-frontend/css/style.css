@@ -223,8 +223,6 @@ nav a[aria-current]{color:var(--red)}
 .face .hint{font:11px var(--mono);color:var(--muted)}
 .face.back .hint{color:#f2eddfcc}
 .face .note{font:12px/1.6 var(--mono);max-width:520px;color:#f2eddfde}
-.letters span{display:inline-block;opacity:0;transform:translateY(40%) rotate(8deg)}
-.card.flipped .letters span{animation:letter .45s var(--ease) forwards;animation-delay:calc(var(--flip-half) + var(--i)*22ms)}
 @keyframes letter{to{opacity:1;transform:none}}
 .stamp-yes,.stamp-no{position:absolute;top:28px;z-index:5;font:800 34px/1 var(--display);padding:4px 12px;border:3px solid;text-transform:uppercase;opacity:0;pointer-events:none}
 .stamp-yes{right:26px;color:#2c8a16;transform:rotate(10deg)}.stamp-no{left:26px;color:#c0560b;transform:rotate(-10deg)}
@@ -539,3 +537,23 @@ mark{background:var(--acid);color:inherit;padding:0 1px}
 .word-card.flipped .wc-front,.card.flipped .face.front{visibility:hidden}
 .word-card.flipped .wc-back,.card.flipped .face.back{visibility:visible}
 @media(prefers-reduced-motion:reduce){.wc-flip,.card-flip{transition:none}.wc-flip.lift,.card-flip.lift{animation:none}.wc-front,.wc-back,.face.front,.face.back{transition:none}}
+
+/* Home icon in the main menu */
+.nav-home{display:inline-flex;align-items:center;gap:6px}
+.nav-home svg{width:18px;height:18px;transition:transform .3s var(--spring)}
+.nav-home:hover svg{transform:translateY(-2px)}
+.nav-home-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:760px){.nav-home svg{width:17px;height:17px}}
+
+/* ── Rollout text ─────────────────────────────────────────────────
+   Each word is a clipped line; its letters rise out of it one after another.
+   It plays whenever a face is shown, starting once the flip reaches the midpoint. */
+.rw{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .02em .12em;margin-bottom:-.12em}
+.rl{display:inline-block;transform:translateY(105%) rotate(7deg);opacity:0;transform-origin:0 100%}
+@keyframes roll-up{to{transform:none;opacity:1}}
+.word-card:not(.flipped) .wc-front .rl,
+.word-card.flipped .wc-back .rl,
+.card:not(.flipped):not(.behind) .face.front .rl,
+.card.flipped .face.back .rl{animation:roll-up .5s var(--ease) forwards;animation-delay:calc(var(--flip-half) + var(--i) * 26ms)}
+.q-prompt .rl{animation:roll-up .5s var(--ease) forwards;animation-delay:calc(.12s + var(--i) * 26ms)}
+@media(prefers-reduced-motion:reduce){.rl{transform:none;opacity:1;animation:none!important}}

@@ -24,7 +24,13 @@ const norm = s => String(s).toLowerCase().replace(/[^\p{L}\p{N}' ]/gu, '').repla
 const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
 const learnedCount = list => list.filter(i => store.isLearned(i.id)).length;
 const pad = n => String(n).padStart(2, '0');
-const letters = s => [...s].map((ch, i) => ch === ' ' ? ' ' : `<span style="--i:${i}">${esc(ch)}</span>`).join('');
+// Rollout text: each word is a clipped line, each letter rises out of it in turn.
+// Screen readers get the plain text; the animated letters are hidden from them.
+const roll = s => {
+  let k = 0;
+  const words = String(s).split(' ').map(w => `<span class="rw">${[...w].map(ch => `<span class="rl" style="--i:${Math.min(k++, 30)}">${esc(ch)}</span>`).join('')}</span>`).join(' ');
+  return `<span class="sr-only">${esc(s)}</span><span class="roll" aria-hidden="true">${words}</span>`;
+};
 const isWT = it => it.source?.doc.startsWith('Wikitravel');
 const srcLine = it => !it.source ? '' : isWT(it) ? 'Wikitravel' : `Peace Corps p.${it.source.page}`;
 const altLine = it => it.alt?.length ? `Also: ${it.alt.map(a => esc(a.nyanja)).join(' · ')}` : '';
@@ -153,8 +159,8 @@ function viewHome() {
       ${floats.map((f, i) => `<span class="floaty f${i + 1}" data-depth="${(i + 1) * 6}">${esc(f.nyanja)}</span>`).join('')}
       <button class="word-card" id="hero-card" aria-label="Flip card to see the Nyanja translation">
         <span class="wc-flip">
-        <span class="wc-face wc-front"><small><span>English</span><span>Tap ↻</span></small><strong id="hc-en">${esc(first.english)}</strong></span>
-        <span class="wc-face wc-back"><small><span>Nyanja</span><span id="hc-src">${srcLine(first)}</span></small><strong id="hc-ny">${esc(first.nyanja)}</strong></span>
+        <span class="wc-face wc-front"><small><span>English</span><span>Tap ↻</span></small><strong id="hc-en">${roll(first.english)}</strong></span>
+        <span class="wc-face wc-back"><small><span>Nyanja</span><span id="hc-src">${srcLine(first)}</span></small><strong id="hc-ny">${roll(first.nyanja)}</strong></span>
         </span>
       </button>
     </div>
@@ -214,9 +220,9 @@ function heroStage(sample) {
   const step = () => {
     if (card.classList.contains('flipped')) {
       i = (i + 1) % sample.length;
-      en.textContent = sample[i].english;
+      en.innerHTML = roll(sample[i].english);
       card.classList.remove('flipped'); lift(card.firstElementChild);
-      setTimeout(() => { ny.textContent = sample[i].nyanja; src.textContent = srcLine(sample[i]); }, 650);
+      setTimeout(() => { ny.innerHTML = roll(sample[i].nyanja); src.textContent = srcLine(sample[i]); }, 650);
     } else { card.classList.add('flipped'); lift(card.firstElementChild); }
   };
   let timer = reduceMotion ? 0 : setInterval(step, 2800);
@@ -313,9 +319,9 @@ function viewLearn(catId) {
     const long = it.nyanja.length > 18 || it.english.length > 22;
     return `<div class="card ${depth ? `behind behind-${depth}` : ''}" ${depth ? 'aria-hidden="true"' : 'tabindex="0" role="button" aria-label="Flashcard. Press space to flip."'}>
       <div class="card-flip">
-        <div class="face front"><small><span>English</span><span>${pad(items.indexOf(it) + 1)}/${pad(items.length)}</span></small><div class="big ${long ? 'long' : ''}">${esc(it.english)}</div><span class="hint">Tap to flip ↻</span></div>
+        <div class="face front"><small><span>English</span><span>${pad(items.indexOf(it) + 1)}/${pad(items.length)}</span></small><div class="big ${long ? 'long' : ''}">${roll(it.english)}</div><span class="hint">Tap to flip ↻</span></div>
         <div class="face back"><small><span>Nyanja</span><span>${srcLine(it)}</span></small>
-          <div><div class="big letters ${long ? 'long' : ''}">${letters(it.nyanja)}</div>
+          <div><div class="big ${long ? 'long' : ''}">${roll(it.nyanja)}</div>
           ${altLine(it) ? `<p class="note">${altLine(it)}</p>` : ''}${it.sourceEnglish ? `<p class="note">Source wording: "${esc(it.sourceEnglish)}"</p>` : ''}${it.note ? `<p class="note">${esc(it.note)}</p>` : ''}${it.dialect ? `<p class="note">Malawi form · to check for Lusaka</p>` : ''}</div>
           <span class="hint">→ got it · ← again</span></div>
       </div>
@@ -437,7 +443,7 @@ function viewQuiz(catId) {
     const opts = shuffle([it, ...pickDistractors(it, dir, cat)]);
     host.innerHTML = `<div class="q-card enter">
       <div class="q-dir"><span>${dir === 'en' ? 'English → Nyanja' : 'Nyanja → English'}</span><span>${pad(qi + 1)}/${pad(qs.length)}</span></div>
-      <div class="q-prompt">${esc(dir === 'en' ? it.english : it.nyanja)}</div>
+      <div class="q-prompt">${roll(dir === 'en' ? it.english : it.nyanja)}</div>
       <p class="q-ask">${dir === 'en' ? 'How do you say this in Nyanja?' : 'What does this mean?'}</p>
       <div class="options">${opts.map((o, i) => `<button class="opt" data-id="${o.id}"><kbd>${i + 1}</kbd>${esc(o[field])}</button>`).join('')}</div>
       <div class="q-feedback" aria-live="polite"></div>
@@ -602,7 +608,9 @@ function route() {
   cleanup.forEach(f => f()); cleanup = [];
   document.querySelectorAll('nav a').forEach(a => a.removeAttribute('aria-current'));
   const kitCat = parts[1] && catById[parts[1]]?.track === 'kit';
-  const navKey = parts[0] === 'kit' || kitCat ? 'kit' : parts[0] === 'phrasebook' ? 'phrasebook' : 'home';
+  const navKey = parts[0] === undefined ? 'home' : parts[0] === 'kit' || kitCat ? 'kit' : parts[0] === 'phrasebook' ? 'phrasebook' : 'learn';
+  const furthest = [5, 4, 3, 2, 1].find(n => isOpen(n));
+  document.getElementById('nav-learn').href = `#/level/${furthest}`;
   document.querySelector(`nav a[data-nav="${navKey}"]`)?.setAttribute('aria-current', 'page');
 
   switch (parts[0]) {
