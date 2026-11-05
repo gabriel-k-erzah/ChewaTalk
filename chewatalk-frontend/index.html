@@ -96,7 +96,29 @@
       <span class="sr-only">Sound</span>
     </button>
   </div>
+  <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-panel" aria-label="Open menu">
+    <span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
 </header>
+
+<!-- Phone menu: a full-screen panel opened from the header's menu button -->
+<div class="menu-panel" id="menu-panel" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="menu-panel-top">
+    <span class="menu-brand">ChewaTalk</span>
+    <button class="menu-close" id="menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+  </div>
+  <nav class="menu-links" aria-label="Main menu">
+    <a href="#/" data-nav="home"><span class="menu-num">01</span>Home</a>
+    <a href="#/level/1" data-nav="learn" id="menu-learn"><span class="menu-num">02</span>Learn</a>
+    <a href="#/kit" data-nav="kit"><span class="menu-num">03</span>Survival kit</a>
+    <a href="#/phrasebook" data-nav="phrasebook"><span class="menu-num">04</span>Phrasebook</a>
+  </nav>
+  <div class="menu-settings">
+    <button class="menu-setting" data-proxy="sound-toggle" aria-pressed="false"><span>Sound effects</span><i class="switch" aria-hidden="true"></i></button>
+    <button class="menu-setting" data-proxy="pets-toggle" aria-pressed="true"><span>Pets running across the screen</span><i class="switch" aria-hidden="true"></i></button>
+  </div>
+  <div class="menu-mascot" id="menu-mascot" aria-hidden="true"></div>
+</div>
 
 <main id="app" tabindex="-1">
   <!-- Plain content for search engines and link previews. The app replaces it as soon as it loads. -->

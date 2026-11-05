@@ -57,6 +57,7 @@ About 6–10 seconds after the page loads, and then every 30–70 seconds, one p
 The live site is at https://chewatalk.com (and www). It's a Cloudflare Worker named `chewatalk` that only serves static assets, on the same account as gabrielerzah.com. To redeploy after changes, run this from this folder:
 
 ```sh
+python3 tools/check_no_emoji.py   # must report 0: the site uses no emoji glyphs anywhere
 npx wrangler@4 deploy --config wrangler.jsonc
 ```
 

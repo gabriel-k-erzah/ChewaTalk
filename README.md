@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://chewatalk.com"><b>▶ Try it at chewatalk.com</b></a>
+  <a href="https://chewatalk.com"><b>Try it at chewatalk.com →</b></a>
 </p>
 
 ---

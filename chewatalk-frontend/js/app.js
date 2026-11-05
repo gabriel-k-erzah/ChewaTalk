@@ -109,6 +109,48 @@ soundBtn.addEventListener('click', () => {
   blip('tap'); toast(sound.on ? 'Sound effects on' : 'Sound effects off');
 });
 
+/* ── Phone menu ───────────────────────────── */
+const menuBtn = document.getElementById('menu-btn'), menuPanel = document.getElementById('menu-panel');
+document.getElementById('menu-mascot').innerHTML = mascotHTML('dog', { say: LINES.hello() });
+const syncSettings = () => menuPanel.querySelectorAll('[data-proxy]').forEach(b =>
+  b.setAttribute('aria-pressed', document.getElementById(b.dataset.proxy).getAttribute('aria-pressed')));
+const menuIsOpen = () => menuPanel.classList.contains('open');
+function openMenu() {
+  syncSettings();
+  menuPanel.hidden = false;
+  void menuPanel.offsetWidth; // start the reveal from the closed state
+  menuPanel.classList.add('open');
+  menuBtn.setAttribute('aria-expanded', 'true');
+  document.body.classList.add('menu-open');
+  blip('tap');
+  setTimeout(() => menuPanel.querySelector('.menu-links a')?.focus({ preventScroll: true }), 120);
+}
+function closeMenu({ restoreFocus = true } = {}) {
+  if (!menuIsOpen()) return;
+  menuPanel.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('menu-open');
+  if (restoreFocus) menuBtn.focus({ preventScroll: true });
+}
+menuBtn.addEventListener('click', openMenu);
+document.getElementById('menu-close').addEventListener('click', () => closeMenu());
+menuPanel.querySelectorAll('.menu-links a').forEach(a => a.addEventListener('click', () => closeMenu({ restoreFocus: false })));
+menuPanel.querySelectorAll('[data-proxy]').forEach(b => b.addEventListener('click', () => {
+  document.getElementById(b.dataset.proxy).click(); syncSettings();
+}));
+addEventListener('keydown', e => {
+  if (!menuIsOpen()) return;
+  if (e.key === 'Escape') { e.preventDefault(); closeMenu(); return; }
+  if (e.key !== 'Tab') return;
+  // Keep keyboard focus inside the open menu.
+  const f = [...menuPanel.querySelectorAll('a, button')].filter(el => el.offsetParent !== null);
+  const first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+});
+addEventListener('hashchange', () => closeMenu({ restoreFocus: false }));
+matchMedia('(min-width: 761px)').addEventListener('change', e => { if (e.matches) closeMenu({ restoreFocus: false }); });
+
 /* ── Views ────────────────────────────────── */
 function levelCardHTML(n) {
   const L = levelInfo(n), p = levelProgress(n), open = isOpen(n);
@@ -253,7 +295,7 @@ function viewLevel(n) {
       <div class="lc-top"><span>${isKit ? 'Survival kit' : `Level ${pad(n)}`}</span><span>${esc(L.name)}</span></div>
       <h1>${esc(L.title)}</h1>
       <p>${p.learned}/${p.verified} verified phrases learned${isKit ? '. Phrases from the 1995 Peace Corps Zambia survival kit and the Wikitravel phrasebook.' : ''}</p>
-      <div class="lc-num" aria-hidden="true">${isKit ? '✳' : n}</div>
+      <div class="lc-num" aria-hidden="true">${isKit ? '<span class="star-mark"></span>' : n}</div>
     </div>
     ${open ? '' : `<p class="small-note" style="margin-top:22px">This level opens once you've learned ${Math.round(UNLOCK_AT * 100)}% of level ${n - 1}. <button class="text-link" id="jump" style="background:none;border:0;border-bottom:1px solid">Jump ahead anyway →</button></p>`}
     <div class="cat-list">${cats.map((c, idx) => {
@@ -610,8 +652,8 @@ function route() {
   const kitCat = parts[1] && catById[parts[1]]?.track === 'kit';
   const navKey = parts[0] === undefined ? 'home' : parts[0] === 'kit' || kitCat ? 'kit' : parts[0] === 'phrasebook' ? 'phrasebook' : 'learn';
   const furthest = [5, 4, 3, 2, 1].find(n => isOpen(n));
-  document.getElementById('nav-learn').href = `#/level/${furthest}`;
-  document.querySelector(`nav a[data-nav="${navKey}"]`)?.setAttribute('aria-current', 'page');
+  document.getElementById('nav-learn').href = document.getElementById('menu-learn').href = `#/level/${furthest}`;
+  document.querySelectorAll(`nav a[data-nav="${navKey}"]`).forEach(a => a.setAttribute('aria-current', 'page'));
 
   switch (parts[0]) {
     case undefined: viewHome(); break;
